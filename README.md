@@ -27,6 +27,10 @@ Once the bundle is updated, `Gemfile.lock` **only** will be committed on a new
 branch called `update-dependencies-{date}`. If `GITHUB_OAUTH_TOKEN` is set in `.env`,
 a pull request will be automatically opened (see below).
 
+Currently, the best way to run it is probably to set up cron jobs to run the above
+command for each of your repositories. The branch name has the date in, so it's probably
+best not to run more than once a day.
+
 Github OAuth Token
 ------------------
 
