@@ -4,6 +4,8 @@ bimble
 A command-line script to check out a repo, run bundle update, then commit and open a PR.
 One more in a long line of robots to make our lives easier.
 
+Oh, and it's called `bimble` because I sometimes misspell `bundle` that way.
+
 License
 -------
 
