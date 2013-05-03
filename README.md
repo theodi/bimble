@@ -29,7 +29,8 @@ a pull request will be automatically opened (see below).
 
 Currently, the best way to run it is probably to set up cron jobs to run the above
 command for each of your repositories. The branch name has the date in, so it's probably
-best not to run more than once a day.
+best not to run more than once a day. We make our [Jenkins](http://jenkins.theodi.org) 
+build server run all ours once a week.
 
 Github OAuth Token
 ------------------
