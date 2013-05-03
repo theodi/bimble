@@ -5,3 +5,4 @@ ruby '2.0.0'
 
 gem 'git'
 gem 'dotenv'
+gem 'github_api'

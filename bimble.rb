@@ -3,30 +3,47 @@
 require 'git'
 require 'date'
 require 'dotenv'
+require 'github_api'
 
 Dotenv.load
 
-git_url = ARGV[0]
+Dir.mktmpdir do |tmpdir|
 
-repo = Git.clone(git_url, 'clone')
+  repo = Git.clone(ARGV[0], tmpdir)
 
-Dir.chdir('clone') do |path|
+  Dir.chdir(tmpdir) do
   
-  if File.exists?("Gemfile")
+    if File.exists?("Gemfile")
   
-    `bundle update`
+      `bundle update`
   
-    if repo.status.changed.keys.include? "Gemfile.lock"
       branch = "update-dependencies-#{Date.today.to_s}"
-      repo.branch(branch).create
-      repo.checkout(branch)
-      repo.add("Gemfile.lock")
-      repo.commit("automatically updated dependencies")  
-      repo.push("origin", branch)
-    end
+  
+      if repo.status.changed.keys.include? "Gemfile.lock"
+        branch = "update-dependencies-#{Date.today.to_s}"
+        repo.branch(branch).create
+        repo.checkout(branch)
+        repo.add("Gemfile.lock")
+        repo.commit("automatically updated dependencies")  
+        repo.push("origin", branch)
+      end
     
+      if ENV['GITHUB_OAUTH_TOKEN']
+        github = Github.new oauth_token: ENV['GITHUB_OAUTH_TOKEN']
+
+        matches = repo.remote("origin").url.match(/\A.+:(.+?)\/([^\.]+).*\Z/)
+        if matches
+          user, repo = matches[1], matches[2]
+          github.pull_requests.create user, repo,
+                                      title: "automatically updated dependencies",
+                                      head: "#{user}:#{branch}",
+                                      base: "master"
+        end
+      
+      end
+    
+    end
+  
   end
   
 end
-
-FileUtils.rm_rf("clone")
