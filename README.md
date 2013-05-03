@@ -34,8 +34,9 @@ best not to run more than once a day.
 Github OAuth Token
 ------------------
 
-The following environment variables should be set in a .env file in order to use this app.
+The following environment variables should be set in a `.env` file in order to use this app.
 
     GITHUB_OAUTH_TOKEN='your-oauth-token-for-your-app'
     
-To generate this token, run `./generate_oauth_token.rb` and follow the instructions.
+To generate this token, run `./generate_oauth_token.rb` and follow the instructions. You'll need
+to be on a machine with a web browser.
