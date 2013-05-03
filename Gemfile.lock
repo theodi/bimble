@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.4)
     dotenv (0.7.0)
     faraday (0.8.7)
       multipart-post (~> 1.1)
@@ -15,6 +16,8 @@ GEM
     httpauth (0.2.0)
     jwt (0.1.8)
       multi_json (>= 1.5)
+    launchy (2.3.0)
+      addressable (~> 2.3)
     multi_json (1.7.2)
     multi_xml (0.5.3)
     multipart-post (1.2.0)
@@ -35,3 +38,4 @@ DEPENDENCIES
   dotenv
   git
   github_api
+  launchy
