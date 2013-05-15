@@ -12,7 +12,7 @@ GEM
       multi_json (~> 1.4)
       nokogiri (~> 1.5.2)
       oauth2
-    hashie (2.0.4)
+    hashie (2.0.5)
     httpauth (0.2.0)
     jwt (0.1.8)
       multi_json (>= 1.5)
