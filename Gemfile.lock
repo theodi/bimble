@@ -6,7 +6,8 @@ GEM
     faraday (0.8.7)
       multipart-post (~> 1.1)
     git (1.2.5)
-    github_api (0.9.7)
+    github_api (0.10.1)
+      addressable
       faraday (~> 0.8.1)
       hashie (>= 1.2)
       multi_json (~> 1.4)
