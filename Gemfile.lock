@@ -17,7 +17,7 @@ GEM
     httpauth (0.2.0)
     jwt (0.1.8)
       multi_json (>= 1.5)
-    launchy (2.4.0)
+    launchy (2.4.1)
       addressable (~> 2.3)
     mini_portile (0.5.2)
     multi_json (1.8.2)
