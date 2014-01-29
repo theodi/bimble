@@ -4,8 +4,8 @@ GEM
     addressable (2.3.5)
     descendants_tracker (0.0.3)
     dotenv (0.9.0)
-    faraday (0.8.8)
-      multipart-post (~> 1.2.0)
+    faraday (0.8.0)
+      multipart-post (~> 1.1)
     git (1.2.6)
     github_api (0.11.1)
       addressable (~> 2.3)
@@ -41,7 +41,7 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
-  faraday (< 0.8.9)
+  faraday (= 0.8.0)
   git
   github_api
   launchy
