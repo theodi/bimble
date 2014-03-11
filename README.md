@@ -31,7 +31,7 @@ You need to be able to clone via SSH from the user the script will run as.
 Then:
 
 ```
-./bimble.rb git@github.com:{user}/{repo}.git
+bimble.rb git@github.com:{user}/{repo}.git
 ```
 
 Once the bundle is updated, `Gemfile.lock` **only** will be committed on a new
