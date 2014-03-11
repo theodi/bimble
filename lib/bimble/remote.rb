@@ -1,8 +1,10 @@
 require 'base64'
 require 'github_api'
+require 'memoist'
 
 class Bimble::Remote
-
+  extend Memoist
+  
   def initialize(user, repo, oauth_token)
     @github = Github.new oauth_token: oauth_token
     @user = user
@@ -13,11 +15,13 @@ class Bimble::Remote
     repo = @github.repos.get @user, @repo
     repo.default_branch
   end
+  memoize :default_branch
 
   def latest_commit(branch_name)
-    branch = @github.repos.branch @user, @repo, branch_name
-    branch['commit']['sha']
+    branch_data = @github.repos.branch @user, @repo, branch_name
+    branch_data['commit']['sha']
   end
+  memoize :latest_commit
 
   def tree(branch)
     @github.git_data.trees.get @user, @repo, branch

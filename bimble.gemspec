@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'dotenv'
   spec.add_dependency 'github_api'
   spec.add_dependency 'launchy'
+  spec.add_dependency 'memoist'
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
@@ -30,5 +31,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock"
+  spec.add_development_dependency "pry"
   
 end
