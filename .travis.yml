@@ -1,0 +1,18 @@
+rvm:
+- 2.1.0
+notifications:
+  irc:
+    channels:
+    - irc.freenode.net#theodi
+    template:
+    - "%{repository} %{branch} - %{message} %{build_url}"
+    on_success: change
+    on_failure: always
+deploy:
+  provider: rubygems
+  api_key:
+    secure: cghgQEppfrTSn3EmPqu0k2ZlerVjDdThEjpUtfR/tnMytznBswJeCbvvEPU52TGgWtbvss2PiBTLulmdX5H/L53DxmEpfINcoz75EfzQ03t0abfs7SRRkU+06eg6QUQbMIklDQW7Mm6CcQ1UGvtOOJOoHvITXPkrf69WOLsjDSA=
+  gem: bimble
+  on:
+    tags: true
+    repo: theodi/bimble
