@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/Floppy/carbon-diet/git/blobs/2235b1712de344a56823ade0149d5ff41f68c092?access_token=<GITHUB_OAUTH_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.11.3
+      Authorization:
+      - Token token="<GITHUB_OAUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 11 Mar 2014 12:44:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4893'
+      X-Ratelimit-Reset:
+      - '1394544954'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Etag:
+      - "\"040b79472d5f1e8296accf26735c5b50\""
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 519F8646:7B0B:13E1817:531F0534
+    body:
+      encoding: UTF-8
+      string: "{\"sha\":\"2235b1712de344a56823ade0149d5ff41f68c092\",\"size\":845,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/2235b1712de344a56823ade0149d5ff41f68c092\",\"content\":\"c291cmNlICdodHRwOi8vcnVieWdlbXMub3JnJwoKZ2VtICdyYWlscycsICd+\\nPiAzLjIuMycKZ2VtICdhY3RpdmVfc2NhZmZvbGQnCmdlbSAnYWlyYnJha2Un\\nCmdlbSAndmFsaWRhdGVzX3RpbWVsaW5lc3MnCmdlbSAnbXVsdGlwYXNzJwpn\\nZW0gJ3dpbGxfcGFnaW5hdGUnCmdlbSAncmFpbHNfYWRtaW4nCmdlbSAicmVj\\nYXB0Y2hhIiwgOnJlcXVpcmUgPT4gInJlY2FwdGNoYS9yYWlscyIKZ2VtICJt\\naW5pX21hZ2ljayIKZ2VtICd3aGVuZXZlcicKCiMgR2VtcyB1c2VkIG9ubHkg\\nZm9yIGFzc2V0cyBhbmQgbm90IHJlcXVpcmVkCiMgaW4gcHJvZHVjdGlvbiBl\\nbnZpcm9ubWVudHMgYnkgZGVmYXVsdC4KZ3JvdXAgOmFzc2V0cyBkbwogIGdl\\nbSAnc2Fzcy1yYWlscycsICAgJ34+IDMuMi4zJwogIGdlbSAnY29mZmVlLXJh\\naWxzJywgJ34+IDMuMi4xJwogIGdlbSAndWdsaWZpZXInLCAnPj0gMS4wLjMn\\nCmVuZAoKZ3JvdXAgOmRldmVsb3BtZW50LCA6dGVzdCBkbwogIGdlbSAnc3Fs\\naXRlMycKICBnZW0gJ2N1Y3VtYmVyLXJhaWxzJywgOnJlcXVpcmUgPT4gZmFs\\nc2UKICBnZW0gJ2RhdGFiYXNlX2NsZWFuZXInCiAgZ2VtICdyc3BlYy1yYWls\\ncycKICBnZW0gJ2d1YXJkLXJzcGVjJwogIGdlbSAnc3BvcmstcmFpbHMnCiAg\\nZ2VtICdndWFyZC1zcG9yaycKICBnZW0gJ2dyb3dsJwogIGdlbSAnc2ltcGxl\\nY292JywgOnJlcXVpcmUgPT4gZmFsc2UKICBnZW0gJ2ZhY3RvcnlfZ2lybF9y\\nYWlscycKICBnZW0gJ2Zha2VyJwogIGdlbSAnYWYnCiAgZ2VtICdjYWxkZWNv\\ndHQnLCAnfj4gMC4wLjUnCiAgZ2VtICdwb2x0ZXJnZWlzdCcKZW5kCgpncm91\\ncCA6cHJvZHVjdGlvbiBkbwogIGdlbSAnbXlzcWwyJwplbmQ=\\n\",\"encoding\":\"base64\"}"
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 12:44:37 GMT
+recorded_with: VCR 2.8.0

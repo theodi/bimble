@@ -1,0 +1,209 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/Floppy/carbon-diet?access_token=<GITHUB_OAUTH_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.11.3
+      Authorization:
+      - Token token="<GITHUB_OAUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 11 Mar 2014 12:44:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4890'
+      X-Ratelimit-Reset:
+      - '1394544954'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Last-Modified:
+      - Tue, 11 Mar 2014 11:49:26 GMT
+      Etag:
+      - "\"64d967a347b4d2380ae35ba1f823517f\""
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - repo
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 519F8646:7B0C:17F3DA6:531F0536
+    body:
+      encoding: UTF-8
+      string: "{\"id\":62934,\"name\":\"carbon-diet\",\"full_name\":\"Floppy/carbon-diet\",\"owner\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"private\":false,\"html_url\":\"https://github.com/Floppy/carbon-diet\",\"description\":\"The
+        source code for the Carbon Diet website\",\"fork\":false,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet\",\"forks_url\":\"https://api.github.com/repos/Floppy/carbon-diet/forks\",\"keys_url\":\"https://api.github.com/repos/Floppy/carbon-diet/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/Floppy/carbon-diet/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/Floppy/carbon-diet/teams\",\"hooks_url\":\"https://api.github.com/repos/Floppy/carbon-diet/hooks\",\"issue_events_url\":\"https://api.github.com/repos/Floppy/carbon-diet/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/Floppy/carbon-diet/events\",\"assignees_url\":\"https://api.github.com/repos/Floppy/carbon-diet/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/Floppy/carbon-diet/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/Floppy/carbon-diet/tags\",\"blobs_url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/Floppy/carbon-diet/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/Floppy/carbon-diet/languages\",\"stargazers_url\":\"https://api.github.com/repos/Floppy/carbon-diet/stargazers\",\"contributors_url\":\"https://api.github.com/repos/Floppy/carbon-diet/contributors\",\"subscribers_url\":\"https://api.github.com/repos/Floppy/carbon-diet/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Floppy/carbon-diet/subscription\",\"commits_url\":\"https://api.github.com/repos/Floppy/carbon-diet/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/Floppy/carbon-diet/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/Floppy/carbon-diet/issues/comments/{number}\",\"contents_url\":\"https://api.github.com/repos/Floppy/carbon-diet/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/Floppy/carbon-diet/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/Floppy/carbon-diet/merges\",\"archive_url\":\"https://api.github.com/repos/Floppy/carbon-diet/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/Floppy/carbon-diet/downloads\",\"issues_url\":\"https://api.github.com/repos/Floppy/carbon-diet/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/Floppy/carbon-diet/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/Floppy/carbon-diet/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Floppy/carbon-diet/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/Floppy/carbon-diet/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/Floppy/carbon-diet/releases{/id}\",\"created_at\":\"2008-10-14T15:07:06Z\",\"updated_at\":\"2014-03-11T11:49:26Z\",\"pushed_at\":\"2014-03-11T11:49:26Z\",\"git_url\":\"git://github.com/Floppy/carbon-diet.git\",\"ssh_url\":\"git@github.com:Floppy/carbon-diet.git\",\"clone_url\":\"https://github.com/Floppy/carbon-diet.git\",\"svn_url\":\"https://github.com/Floppy/carbon-diet\",\"homepage\":\"http://www.carbondiet.org\",\"size\":4637,\"stargazers_count\":6,\"watchers_count\":6,\"language\":\"Ruby\",\"has_issues\":true,\"has_downloads\":false,\"has_wiki\":false,\"forks_count\":2,\"mirror_url\":null,\"open_issues_count\":86,\"forks\":2,\"open_issues\":86,\"watchers\":6,\"default_branch\":\"master\",\"permissions\":{\"admin\":true,\"push\":true,\"pull\":true},\"network_count\":2,\"subscribers_count\":1}"
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 12:44:39 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/Floppy/carbon-diet/git/trees/master?access_token=<GITHUB_OAUTH_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.11.3
+      Authorization:
+      - Token token="<GITHUB_OAUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 11 Mar 2014 12:44:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4889'
+      X-Ratelimit-Reset:
+      - '1394544954'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Last-Modified:
+      - Tue, 11 Mar 2014 11:49:26 GMT
+      Etag:
+      - "\"64d967a347b4d2380ae35ba1f823517f\""
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 519F8646:7B0D:70D59C:531F0536
+    body:
+      encoding: UTF-8
+      string: "{\"sha\":\"master\",\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees/master\",\"tree\":[{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"b682e8416c6df43f6c99248df0af76a20e4b7db6\",\"path\":\".gitignore\",\"size\":181,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/b682e8416c6df43f6c99248df0af76a20e4b7db6\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"cf6add7ea568d3d90d6a1f8afb0898b0119b14ff\",\"path\":\".rspec\",\"size\":8,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/cf6add7ea568d3d90d6a1f8afb0898b0119b14ff\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"acea2c24f3f3ecbdb0e6b591e0ae89d2a53ae268\",\"path\":\".rvmrc\",\"size\":2017,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/acea2c24f3f3ecbdb0e6b591e0ae89d2a53ae268\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"f45610749ff54b36d1f9416227125d3d69897f67\",\"path\":\".travis.yml\",\"size\":138,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/f45610749ff54b36d1f9416227125d3d69897f67\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"dba13ed2ddf783ee8118c6a581dbf75305f816a3\",\"path\":\"COPYING\",\"size\":34520,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/dba13ed2ddf783ee8118c6a581dbf75305f816a3\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"c36d48d211d6f61b7553a17d7f47853c22415f95\",\"path\":\"Capfile\",\"size\":151,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/c36d48d211d6f61b7553a17d7f47853c22415f95\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"2235b1712de344a56823ade0149d5ff41f68c092\",\"path\":\"Gemfile\",\"size\":845,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/2235b1712de344a56823ade0149d5ff41f68c092\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"cee4ab1ccf3ab42186bc3d0a066daefe057c57b5\",\"path\":\"Gemfile.lock\",\"size\":7765,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/cee4ab1ccf3ab42186bc3d0a066daefe057c57b5\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"4cc6b0345cce593ba325fd11448eb569baf75082\",\"path\":\"Guardfile\",\"size\":1278,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/4cc6b0345cce593ba325fd11448eb569baf75082\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"2bc769d7bbf8acee2023f1885f588ec407e3931a\",\"path\":\"README.md\",\"size\":2918,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/2bc769d7bbf8acee2023f1885f588ec407e3931a\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"1104c23fce27da13d5a7d0d4a66f306c6150596e\",\"path\":\"Rakefile\",\"size\":275,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/1104c23fce27da13d5a7d0d4a66f306c6150596e\"},{\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"1a846ee3888bab4b306f4fea38cab45fbd0d47d7\",\"path\":\"app\",\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees/1a846ee3888bab4b306f4fea38cab45fbd0d47d7\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"20ec8012878996d8a37a7247a0df216a6f2a967c\",\"path\":\"config.ru\",\"size\":160,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/20ec8012878996d8a37a7247a0df216a6f2a967c\"},{\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"530987b9ddaafba5a95d50e306e7273f95387329\",\"path\":\"config\",\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees/530987b9ddaafba5a95d50e306e7273f95387329\"},{\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"258050568d0021a8ed2edc0f4476d39ed5704dba\",\"path\":\"db\",\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees/258050568d0021a8ed2edc0f4476d39ed5704dba\"},{\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"bf709be26bb6af90d6f173e96ec1af5a164430f2\",\"path\":\"features\",\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees/bf709be26bb6af90d6f173e96ec1af5a164430f2\"},{\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"eae4775039d8983b51f53fe6ffa065cd1e27f949\",\"path\":\"lib\",\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees/eae4775039d8983b51f53fe6ffa065cd1e27f949\"},{\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"bd7150df9f47be210c33d1aa57e884cc453f3e8e\",\"path\":\"public\",\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees/bd7150df9f47be210c33d1aa57e884cc453f3e8e\"},{\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"9925553bddc5f00d96414dea1c936688dd03256d\",\"path\":\"script\",\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees/9925553bddc5f00d96414dea1c936688dd03256d\"},{\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"1be8b5431296ed28f053fe4f57d941131a1d0a9b\",\"path\":\"spec\",\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees/1be8b5431296ed28f053fe4f57d941131a1d0a9b\"},{\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"ab3d171bf05bf55c0cd930ac286f95552e49ed91\",\"path\":\"vendor\",\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/trees/ab3d171bf05bf55c0cd930ac286f95552e49ed91\"}]}"
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 12:44:39 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/Floppy/carbon-diet/git/blobs/2235b1712de344a56823ade0149d5ff41f68c092?access_token=<GITHUB_OAUTH_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.11.3
+      Authorization:
+      - Token token="<GITHUB_OAUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 11 Mar 2014 12:44:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4888'
+      X-Ratelimit-Reset:
+      - '1394544954'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Etag:
+      - "\"040b79472d5f1e8296accf26735c5b50\""
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 519F8646:7B0C:17F3FB4:531F0537
+    body:
+      encoding: UTF-8
+      string: "{\"sha\":\"2235b1712de344a56823ade0149d5ff41f68c092\",\"size\":845,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/2235b1712de344a56823ade0149d5ff41f68c092\",\"content\":\"c291cmNlICdodHRwOi8vcnVieWdlbXMub3JnJwoKZ2VtICdyYWlscycsICd+\\nPiAzLjIuMycKZ2VtICdhY3RpdmVfc2NhZmZvbGQnCmdlbSAnYWlyYnJha2Un\\nCmdlbSAndmFsaWRhdGVzX3RpbWVsaW5lc3MnCmdlbSAnbXVsdGlwYXNzJwpn\\nZW0gJ3dpbGxfcGFnaW5hdGUnCmdlbSAncmFpbHNfYWRtaW4nCmdlbSAicmVj\\nYXB0Y2hhIiwgOnJlcXVpcmUgPT4gInJlY2FwdGNoYS9yYWlscyIKZ2VtICJt\\naW5pX21hZ2ljayIKZ2VtICd3aGVuZXZlcicKCiMgR2VtcyB1c2VkIG9ubHkg\\nZm9yIGFzc2V0cyBhbmQgbm90IHJlcXVpcmVkCiMgaW4gcHJvZHVjdGlvbiBl\\nbnZpcm9ubWVudHMgYnkgZGVmYXVsdC4KZ3JvdXAgOmFzc2V0cyBkbwogIGdl\\nbSAnc2Fzcy1yYWlscycsICAgJ34+IDMuMi4zJwogIGdlbSAnY29mZmVlLXJh\\naWxzJywgJ34+IDMuMi4xJwogIGdlbSAndWdsaWZpZXInLCAnPj0gMS4wLjMn\\nCmVuZAoKZ3JvdXAgOmRldmVsb3BtZW50LCA6dGVzdCBkbwogIGdlbSAnc3Fs\\naXRlMycKICBnZW0gJ2N1Y3VtYmVyLXJhaWxzJywgOnJlcXVpcmUgPT4gZmFs\\nc2UKICBnZW0gJ2RhdGFiYXNlX2NsZWFuZXInCiAgZ2VtICdyc3BlYy1yYWls\\ncycKICBnZW0gJ2d1YXJkLXJzcGVjJwogIGdlbSAnc3BvcmstcmFpbHMnCiAg\\nZ2VtICdndWFyZC1zcG9yaycKICBnZW0gJ2dyb3dsJwogIGdlbSAnc2ltcGxl\\nY292JywgOnJlcXVpcmUgPT4gZmFsc2UKICBnZW0gJ2ZhY3RvcnlfZ2lybF9y\\nYWlscycKICBnZW0gJ2Zha2VyJwogIGdlbSAnYWYnCiAgZ2VtICdjYWxkZWNv\\ndHQnLCAnfj4gMC4wLjUnCiAgZ2VtICdwb2x0ZXJnZWlzdCcKZW5kCgpncm91\\ncCA6cHJvZHVjdGlvbiBkbwogIGdlbSAnbXlzcWwyJwplbmQ=\\n\",\"encoding\":\"base64\"}"
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 12:44:40 GMT
+recorded_with: VCR 2.8.0
