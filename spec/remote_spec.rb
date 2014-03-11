@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Bimble::Remote, :vcr do
   
   before :all do
-    @remote = Bimble::Remote.new('Floppy', 'carbon-diet', ENV['GITHUB_OAUTH_TOKEN'])
+    @remote = Bimble::Remote.new('Floppy', 'bimble-test', ENV['GITHUB_OAUTH_TOKEN'])
   end
   
   it "should be able to fetch the default branch for a repo" do
@@ -11,17 +11,17 @@ describe Bimble::Remote, :vcr do
   end
 
   it "should be able to get a blob sha for a file on a branch" do
-    @remote.blob_sha('master', 'Gemfile').should == '2235b1712de344a56823ade0149d5ff41f68c092'
+    @remote.blob_sha('master', 'Gemfile').should == '971ea446b4dd814d3e1a59f2df9f52d911e60168'
   end
 
   it "should be able to get the content of the Gemfile blob" do
-    content = @remote.blob_content('2235b1712de344a56823ade0149d5ff41f68c092')
-    content.should include("source 'http://rubygems.org'")
-    content.should include("gem 'mysql2'")
+    content = @remote.blob_content('971ea446b4dd814d3e1a59f2df9f52d911e60168')
+    content.should include('source "https://rubygems.org"')
+    content.should include("gem 'rake'")
   end
   
   it "should be able to get the Gemfile in one call" do
-    @remote.gemfile.should include("source 'http://rubygems.org'")
+    @remote.gemfile.should include('source "https://rubygems.org"')
   end
   
   # change the content somehow and post a new blob object with that new content, getting a blob SHA back

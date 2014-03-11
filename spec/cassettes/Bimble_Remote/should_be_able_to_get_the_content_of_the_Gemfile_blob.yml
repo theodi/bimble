@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/repos/Floppy/carbon-diet/git/blobs/2235b1712de344a56823ade0149d5ff41f68c092?access_token=<GITHUB_OAUTH_TOKEN>
+    uri: https://api.github.com/repos/Floppy/bimble-test/git/blobs/971ea446b4dd814d3e1a59f2df9f52d911e60168?access_token=<GITHUB_OAUTH_TOKEN>
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 11 Mar 2014 12:44:36 GMT
+      - Tue, 11 Mar 2014 12:52:56 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,13 +35,13 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4893'
+      - '4809'
       X-Ratelimit-Reset:
       - '1394544954'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Etag:
-      - "\"040b79472d5f1e8296accf26735c5b50\""
+      - "\"086d5a47259b2ea86367784a005cf9b4\""
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
@@ -61,10 +61,10 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 519F8646:7B0B:13E1817:531F0534
+      - 519F8646:31E7:1326832:531F0728
     body:
       encoding: UTF-8
-      string: "{\"sha\":\"2235b1712de344a56823ade0149d5ff41f68c092\",\"size\":845,\"url\":\"https://api.github.com/repos/Floppy/carbon-diet/git/blobs/2235b1712de344a56823ade0149d5ff41f68c092\",\"content\":\"c291cmNlICdodHRwOi8vcnVieWdlbXMub3JnJwoKZ2VtICdyYWlscycsICd+\\nPiAzLjIuMycKZ2VtICdhY3RpdmVfc2NhZmZvbGQnCmdlbSAnYWlyYnJha2Un\\nCmdlbSAndmFsaWRhdGVzX3RpbWVsaW5lc3MnCmdlbSAnbXVsdGlwYXNzJwpn\\nZW0gJ3dpbGxfcGFnaW5hdGUnCmdlbSAncmFpbHNfYWRtaW4nCmdlbSAicmVj\\nYXB0Y2hhIiwgOnJlcXVpcmUgPT4gInJlY2FwdGNoYS9yYWlscyIKZ2VtICJt\\naW5pX21hZ2ljayIKZ2VtICd3aGVuZXZlcicKCiMgR2VtcyB1c2VkIG9ubHkg\\nZm9yIGFzc2V0cyBhbmQgbm90IHJlcXVpcmVkCiMgaW4gcHJvZHVjdGlvbiBl\\nbnZpcm9ubWVudHMgYnkgZGVmYXVsdC4KZ3JvdXAgOmFzc2V0cyBkbwogIGdl\\nbSAnc2Fzcy1yYWlscycsICAgJ34+IDMuMi4zJwogIGdlbSAnY29mZmVlLXJh\\naWxzJywgJ34+IDMuMi4xJwogIGdlbSAndWdsaWZpZXInLCAnPj0gMS4wLjMn\\nCmVuZAoKZ3JvdXAgOmRldmVsb3BtZW50LCA6dGVzdCBkbwogIGdlbSAnc3Fs\\naXRlMycKICBnZW0gJ2N1Y3VtYmVyLXJhaWxzJywgOnJlcXVpcmUgPT4gZmFs\\nc2UKICBnZW0gJ2RhdGFiYXNlX2NsZWFuZXInCiAgZ2VtICdyc3BlYy1yYWls\\ncycKICBnZW0gJ2d1YXJkLXJzcGVjJwogIGdlbSAnc3BvcmstcmFpbHMnCiAg\\nZ2VtICdndWFyZC1zcG9yaycKICBnZW0gJ2dyb3dsJwogIGdlbSAnc2ltcGxl\\nY292JywgOnJlcXVpcmUgPT4gZmFsc2UKICBnZW0gJ2ZhY3RvcnlfZ2lybF9y\\nYWlscycKICBnZW0gJ2Zha2VyJwogIGdlbSAnYWYnCiAgZ2VtICdjYWxkZWNv\\ndHQnLCAnfj4gMC4wLjUnCiAgZ2VtICdwb2x0ZXJnZWlzdCcKZW5kCgpncm91\\ncCA6cHJvZHVjdGlvbiBkbwogIGdlbSAnbXlzcWwyJwplbmQ=\\n\",\"encoding\":\"base64\"}"
+      string: "{\"sha\":\"971ea446b4dd814d3e1a59f2df9f52d911e60168\",\"size\":79,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/971ea446b4dd814d3e1a59f2df9f52d911e60168\",\"content\":\"c291cmNlICJodHRwczovL3J1YnlnZW1zLm9yZyIKCiNydWJ5PTIuMS4wCiNy\\ndWJ5LWdlbXNldD1iaW1ibGUtdGVzdAoKZ2VtICdyYWtlJw==\\n\",\"encoding\":\"base64\"}"
     http_version: 
-  recorded_at: Tue, 11 Mar 2014 12:44:37 GMT
+  recorded_at: Tue, 11 Mar 2014 12:52:57 GMT
 recorded_with: VCR 2.8.0
