@@ -24,10 +24,6 @@ describe Bimble::Remote, :vcr do
     content.should include("gem 'rake'")
   end
   
-  it "should be able to get the Gemfile in one call" do
-    @remote.gemfile.should include('source "https://rubygems.org"')
-  end
-  
   it "should be able to create a new blob" do
     blob_sha = @remote.create_blob('new blob content')
     blob_sha.should == '28b552e7359c5c3bbe947749aab70d18e3ea554b'
@@ -56,5 +52,9 @@ describe Bimble::Remote, :vcr do
     pr.number.should == 1
   end
   
+  it "should be able to update Gemfile.lock and open PR all in one go" do
+    pr = @remote.update_dependencies!
+    pr.number.should == 2
+  end
   
 end

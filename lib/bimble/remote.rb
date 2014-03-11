@@ -11,6 +11,17 @@ class Bimble::Remote
     @repo = repo
   end
 
+  def update_dependencies!
+    sha = blob_sha(default_branch, "Gemfile")
+    content = blob_content(sha)
+    content.reverse!
+    blob_sha = create_blob(content)
+    tree_sha = add_blob_to_tree(blob_sha, "Gemfile.lock")
+    commit_sha = commit(tree_sha)
+    create_branch('update-dependencies', commit_sha)
+    open_pr('update-dependencies', default_branch)
+  end
+
   def default_branch
     repo = @github.repos.get @user, @repo
     repo.default_branch
@@ -39,11 +50,6 @@ class Bimble::Remote
     else
       blob['content']
     end
-  end
-
-  def gemfile
-    sha = blob_sha(default_branch, "Gemfile")
-    blob_content(sha)
   end
 
   def create_blob(content)
