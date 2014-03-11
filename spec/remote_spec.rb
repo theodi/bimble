@@ -9,6 +9,10 @@ describe Bimble::Remote, :vcr do
   it "should be able to fetch the default branch for a repo" do
     @remote.default_branch.should == 'master'
   end
+  
+  it "should be able to get latest commit SHA on a branch" do
+    @remote.latest_commit('master').should == '97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c'
+  end
 
   it "should be able to get a blob sha for a file on a branch" do
     @remote.blob_sha('master', 'Gemfile').should == '971ea446b4dd814d3e1a59f2df9f52d911e60168'

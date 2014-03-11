@@ -14,6 +14,11 @@ class Bimble::Remote
     repo.default_branch
   end
 
+  def latest_commit(branch_name)
+    branch = @github.repos.branch @user, @repo, branch_name
+    branch['commit']['sha']
+  end
+
   def blob_sha(branch, path)
     tree = @github.git_data.trees.get @user, @repo, branch
     tree['tree'].find{|x| x['path'] == path && x['type'] == 'blob'}.sha rescue nil
