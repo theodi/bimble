@@ -31,7 +31,7 @@ You need to be able to clone via SSH from the user the script will run as.
 Then:
 
 ```
-bimble.rb git@github.com:{user}/{repo}.git
+bimble git@github.com:{user}/{repo}.git
 ```
 
 Once the bundle is updated, `Gemfile.lock` **only** will be committed on a new
@@ -49,7 +49,7 @@ The following environment variables should be set in a `.env` file in order to u
 
     GITHUB_OAUTH_TOKEN='your-oauth-token-for-your-app'
     
-To generate this token, run `./generate_oauth_token.rb` and follow the instructions. You'll need
+To generate this token, run `generate_github_oauth_token` and follow the instructions. You'll need
 to be on a machine with a web browser.
 
 ## Contributing
