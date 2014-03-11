@@ -47,4 +47,15 @@ class Bimble::Remote
     blob['sha']
   end
 
+  def add_blob_to_tree(sha, filename)
+    tree = tree default_branch
+    new_tree = @github.git_data.trees.create @user, @repo, "base_tree" => tree['sha'], "tree" => [
+      "path" => "Gemfile.lock",
+      "mode" => "100644",
+      "type" => "blob",
+      "sha" => sha
+    ]
+    new_tree['sha']
+  end
+
 end

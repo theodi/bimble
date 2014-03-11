@@ -32,5 +32,11 @@ describe Bimble::Remote, :vcr do
     blob_sha = @remote.create_blob('new blob content')
     blob_sha.should == '28b552e7359c5c3bbe947749aab70d18e3ea554b'
   end
+
+  it "should be able to create a tree with the new blob in it given a filename" do
+    # post a new tree object with that file path pointer replaced with your new blob SHA getting a tree SHA back
+    tree_sha = @remote.add_blob_to_tree('28b552e7359c5c3bbe947749aab70d18e3ea554b', 'Gemfile.lock')
+    tree_sha.should == 'e12209a3617bd2fd7a95755dc2808b75e239afa7'
+  end
   
 end
