@@ -1,5 +1,5 @@
 require "bimble/version"
-require "bimble/runner"
+require "bimble/local"
 
 module Bimble
   # Your code goes here...
