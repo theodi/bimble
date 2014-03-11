@@ -11,12 +11,14 @@ class Bimble::Github
     @repo = repo
   end
 
-  def update_dependencies!
-    sha = blob_sha(default_branch, "Gemfile")
+  def get_file(name)
+    sha = blob_sha(default_branch, name)
     content = blob_content(sha)
-    content.reverse!
+  end
+  
+  def commit_file(name, content)    
     blob_sha = create_blob(content)
-    tree_sha = add_blob_to_tree(blob_sha, "Gemfile.lock")
+    tree_sha = add_blob_to_tree(blob_sha, name)
     commit_sha = commit(tree_sha)
     create_branch('update-dependencies', commit_sha)
     open_pr('update-dependencies', default_branch)
@@ -60,7 +62,7 @@ class Bimble::Github
   def add_blob_to_tree(sha, filename)
     tree = tree default_branch
     new_tree = @github.git_data.trees.create @user, @repo, "base_tree" => tree['sha'], "tree" => [
-      "path" => "Gemfile.lock",
+      "path" => filename,
       "mode" => "100644",
       "type" => "blob",
       "sha" => sha

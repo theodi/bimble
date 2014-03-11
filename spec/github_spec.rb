@@ -53,7 +53,8 @@ describe Bimble::Github, :vcr do
   end
   
   it "should be able to update Gemfile.lock and open PR all in one go" do
-    pr = @remote.update_dependencies!
+    content = @remote.get_file("Gemfile")
+    pr = @remote.commit_file(content.reverse, "Gemfile.lock")
     pr.number.should == 2
   end
   
