@@ -1,19 +1,30 @@
-bimble
-======
+# Bimble
 
-A command-line script to check out a repo, run bundle update, then commit and open a PR.
+A gem and executable to check out a repo, run bundle update, then commit and open a PR.
 One more in a long line of robots to make our lives easier.
 
 Oh, and it's called `bimble` because I sometimes misspell `bundle` that way.
 
-License
--------
+## License
 
 This code is open source under the MIT license. See the LICENSE.md file for 
 full details.
 
-Use
----
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'bimble'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install bimble
+
+## Usage
 
 You need to be able to clone via SSH from the user the script will run as.
 
@@ -32,8 +43,7 @@ command for each of your repositories. The branch name has the date in, so it's 
 best not to run more than once a day. We make our [Jenkins](http://jenkins.theodi.org) 
 build server run all ours once a week.
 
-Github OAuth Token
-------------------
+## Github OAuth Token
 
 The following environment variables should be set in a `.env` file in order to use this app.
 
@@ -41,3 +51,11 @@ The following environment variables should be set in a `.env` file in order to u
     
 To generate this token, run `./generate_oauth_token.rb` and follow the instructions. You'll need
 to be on a machine with a web browser.
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
