@@ -24,9 +24,9 @@ describe Bimble::Remote, :vcr do
     @remote.gemfile.should include('source "https://rubygems.org"')
   end
   
-  # change the content somehow and post a new blob object with that new content, getting a blob SHA back
-  # post a new tree object with that file path pointer replaced with your new blob SHA getting a tree SHA back
-  # create a new commit object with the current commit SHA as the parent and the new tree SHA, getting a commit SHA back
-  # update the reference of your branch to point to the new commit SHA
+  it "should be able to create a new blob" do
+    blob = @remote.create_blob(@remote.gemfile + 'parp')
+    blob['sha'].should == '2f887b9646727c6d09043c99980fbd7dcb04d9d6'
+  end
   
 end

@@ -33,4 +33,8 @@ class Bimble::Remote
     blob_content(sha)
   end
 
+  def create_blob(content)
+    @github.git_data.blobs.create @user, @repo, "content" => content, "encoding" => "utf-8"
+  end
+
 end
