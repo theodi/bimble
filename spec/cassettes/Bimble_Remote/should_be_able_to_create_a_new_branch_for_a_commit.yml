@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.github.com/repos/Floppy/bimble-test/git/refs?access_token=<GITHUB_OAUTH_TOKEN>
+    body:
+      encoding: UTF-8
+      string: "{\"ref\":\"refs/heads/update-dependencies\",\"sha\":\"fe6e5861c26a3a61c918b9b4bcc82059e4c0c62b\"}"
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.11.3
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token="<GITHUB_OAUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 11 Mar 2014 16:50:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 201 Created
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4865'
+      X-Ratelimit-Reset:
+      - '1394560236'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Etag:
+      - "\"043a6d8d3b3623e8eeeded6773d89855\""
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Location:
+      - https://api.github.com/repos/Floppy/bimble-test/git/refs/heads/update-dependencies
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '316'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 519F8646:7B0C:1F6D276:531F3EDB
+    body:
+      encoding: UTF-8
+      string: "{\"ref\":\"refs/heads/update-dependencies\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/refs/heads/update-dependencies\",\"object\":{\"sha\":\"fe6e5861c26a3a61c918b9b4bcc82059e4c0c62b\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits/fe6e5861c26a3a61c918b9b4bcc82059e4c0c62b\"}}"
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 16:50:36 GMT
+recorded_with: VCR 2.8.0

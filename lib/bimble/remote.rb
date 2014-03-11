@@ -69,5 +69,10 @@ class Bimble::Remote
               "tree" => sha
     commit['sha']
   end
+  
+  def create_branch(name, sha)
+    branch = @github.git_data.references.create @user, @repo, "ref" => "refs/heads/#{name}", "sha" => sha
+    branch['ref']
+  end
 
 end

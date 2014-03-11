@@ -45,4 +45,10 @@ describe Bimble::Remote, :vcr do
     commit_sha.should == 'fe6e5861c26a3a61c918b9b4bcc82059e4c0c62b'
   end
   
+  it "should be able to create a new branch for a commit" do
+    # update the reference of your branch to point to the new commit SHA
+    branch = @remote.create_branch('update-dependencies', 'fe6e5861c26a3a61c918b9b4bcc82059e4c0c62b')
+    branch.should == 'refs/heads/update-dependencies'
+  end
+  
 end
