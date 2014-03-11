@@ -1,6 +1,6 @@
 require "bimble/version"
 require "bimble/local"
-require "bimble/remote"
+require "bimble/github"
 
 module Bimble
   # Your code goes here...

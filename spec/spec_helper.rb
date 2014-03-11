@@ -6,6 +6,7 @@ Dotenv.load
 
 require 'vcr'
 require 'bimble'
+require 'pry'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
