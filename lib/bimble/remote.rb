@@ -19,8 +19,12 @@ class Bimble::Remote
     branch['commit']['sha']
   end
 
+  def tree(branch)
+    @github.git_data.trees.get @user, @repo, branch
+  end
+
   def blob_sha(branch, path)
-    tree = @github.git_data.trees.get @user, @repo, branch
+    tree = tree branch
     tree['tree'].find{|x| x['path'] == path && x['type'] == 'blob'}.sha rescue nil
   end
   
