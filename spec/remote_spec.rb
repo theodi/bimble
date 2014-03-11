@@ -29,8 +29,8 @@ describe Bimble::Remote, :vcr do
   end
   
   it "should be able to create a new blob" do
-    blob = @remote.create_blob(@remote.gemfile + 'parp')
-    blob['sha'].should == '2f887b9646727c6d09043c99980fbd7dcb04d9d6'
+    blob_sha = @remote.create_blob('new blob content')
+    blob_sha.should == '28b552e7359c5c3bbe947749aab70d18e3ea554b'
   end
   
 end
