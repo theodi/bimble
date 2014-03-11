@@ -62,4 +62,12 @@ class Bimble::Remote
     new_tree['sha']
   end
 
+  def commit(sha)
+    parent = latest_commit(default_branch)
+    commit = @github.git_data.commits.create @user, @repo, "message" => "updated dependencies",
+              "parents" => [parent],
+              "tree" => sha
+    commit['sha']
+  end
+
 end

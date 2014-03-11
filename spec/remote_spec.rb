@@ -39,4 +39,10 @@ describe Bimble::Remote, :vcr do
     tree_sha.should == 'e12209a3617bd2fd7a95755dc2808b75e239afa7'
   end
   
+  it "should be able to create a new commit from a tree" do
+    # create a new commit object with the current commit SHA as the parent and the new tree SHA, getting a commit SHA back
+    commit_sha = @remote.commit('e12209a3617bd2fd7a95755dc2808b75e239afa7')
+    commit_sha.should == 'fe6e5861c26a3a61c918b9b4bcc82059e4c0c62b'
+  end
+  
 end
