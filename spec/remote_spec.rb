@@ -51,4 +51,10 @@ describe Bimble::Remote, :vcr do
     branch.should == 'refs/heads/update-dependencies'
   end
   
+  it "should be able to open a pull request back to the default branch" do
+    pr = @remote.open_pr('update-dependencies', 'master')
+    pr.number.should == 1
+  end
+  
+  
 end
