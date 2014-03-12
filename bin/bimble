@@ -5,5 +5,5 @@ require 'bimble'
 
 Dotenv.load
 
-bimble = Bimble::Local.new(ENV['GITHUB_OAUTH_TOKEN'])
-bimble.update(ARGV[0])
+bimble = Bimble.create(:clone, git_url: ARGV[0], github_oauth_token: ENV['GITHUB_OAUTH_TOKEN'])
+bimble.update

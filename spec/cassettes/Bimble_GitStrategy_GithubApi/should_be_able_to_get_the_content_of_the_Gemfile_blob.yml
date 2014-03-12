@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/Floppy/bimble-test/git/blobs/971ea446b4dd814d3e1a59f2df9f52d911e60168?access_token=<GITHUB_OAUTH_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.11.3
+      Authorization:
+      - Token token="<GITHUB_OAUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 11 Mar 2014 12:52:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4809'
+      X-Ratelimit-Reset:
+      - '1394544954'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Etag:
+      - "\"086d5a47259b2ea86367784a005cf9b4\""
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 519F8646:31E7:1326832:531F0728
+    body:
+      encoding: UTF-8
+      string: "{\"sha\":\"971ea446b4dd814d3e1a59f2df9f52d911e60168\",\"size\":79,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/971ea446b4dd814d3e1a59f2df9f52d911e60168\",\"content\":\"c291cmNlICJodHRwczovL3J1YnlnZW1zLm9yZyIKCiNydWJ5PTIuMS4wCiNy\\ndWJ5LWdlbXNldD1iaW1ibGUtdGVzdAoKZ2VtICdyYWtlJw==\\n\",\"encoding\":\"base64\"}"
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 12:52:57 GMT
+recorded_with: VCR 2.8.0

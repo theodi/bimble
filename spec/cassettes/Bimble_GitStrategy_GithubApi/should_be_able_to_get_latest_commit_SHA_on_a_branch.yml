@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/Floppy/bimble-test/branches/master?access_token=<GITHUB_OAUTH_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.11.3
+      Authorization:
+      - Token token="<GITHUB_OAUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 11 Mar 2014 14:52:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4854'
+      X-Ratelimit-Reset:
+      - '1394553143'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Etag:
+      - "\"3a7913057633488993c3bf95f7d29565\""
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 519F8646:31E7:16A53C8:531F2327
+    body:
+      encoding: UTF-8
+      string: "{\"name\":\"master\",\"commit\":{\"sha\":\"97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"commit\":{\"author\":{\"name\":\"James
+        Smith\",\"email\":\"james@floppy.org.uk\",\"date\":\"2014-03-11T12:51:07Z\"},\"committer\":{\"name\":\"James
+        Smith\",\"email\":\"james@floppy.org.uk\",\"date\":\"2014-03-11T12:51:07Z\"},\"message\":\"test
+        gemfile\",\"tree\":{\"sha\":\"5ed8484f4e04996c3a4cf10eba9e24d4ef3a3cbb\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees/5ed8484f4e04996c3a4cf10eba9e24d4ef3a3cbb\"},\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"comment_count\":0},\"url\":\"https://api.github.com/repos/Floppy/bimble-test/commits/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"html_url\":\"https://github.com/Floppy/bimble-test/commit/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/commits/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c/comments\",\"author\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"committer\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"parents\":[]},\"_links\":{\"self\":\"https://api.github.com/repos/Floppy/bimble-test/branches/master\",\"html\":\"https://github.com/Floppy/bimble-test/tree/master\"}}"
+    http_version: 
+  recorded_at: Tue, 11 Mar 2014 14:52:24 GMT
+recorded_with: VCR 2.8.0
