@@ -2,6 +2,7 @@ require 'git'
 
 class Bimble::GitStrategy::Clone
 
+  include Bimble::Helpers::Strings
   include Bimble::Helpers::Github
 
   def initialize(git_url, oauth_token)
@@ -24,13 +25,12 @@ class Bimble::GitStrategy::Clone
 
   def commit_to_new_branch(repository)
     if repository.status.changed.keys.include? "Gemfile.lock"
-      branch = Bimble.branch_name
-      repository.branch(branch).create
-      repository.checkout(branch)
+      repository.branch(branch_name).create
+      repository.checkout(branch_name)
       repository.add("Gemfile.lock")
       repository.commit(Bimble.commit_message)  
-      repository.push("origin", branch)
-      branch
+      repository.push("origin", branch_name)
+      branch_name
     else
       nil
     end

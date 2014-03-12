@@ -73,7 +73,7 @@ module Bimble::Helpers::Github
 
   def commit(sha)
     parent = latest_commit(default_branch)
-    commit = github.git_data.commits.create user, repo, "message" => Bimble.commit_message,
+    commit = github.git_data.commits.create user, repo, "message" => commit_message,
               "parents" => [parent],
               "tree" => sha
     commit['sha']
@@ -86,8 +86,8 @@ module Bimble::Helpers::Github
 
   def open_pr(head, base)
     github.pull_requests.create user, repo,
-      "title" => Bimble.pull_request_title,
-      "body" => Bimble.pull_request_body,
+      "title" => pull_request_title,
+      "body" => pull_request_body,
       "head" => head,
       "base" => base
   end

@@ -9,7 +9,8 @@ module Bimble
 end
 
 require "bimble/version"
-require "bimble/helpers"
+require "bimble/helpers/github"
+require "bimble/helpers/strings"
 require "bimble/git_strategy/clone"
 require "bimble/git_strategy/github_api"
 require "bimble/factory"
