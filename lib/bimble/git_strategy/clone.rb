@@ -28,7 +28,7 @@ class Bimble::GitStrategy::Clone
       repository.branch(branch_name).create
       repository.checkout(branch_name)
       repository.add("Gemfile.lock")
-      repository.commit(Bimble.commit_message)  
+      repository.commit(commit_message)  
       repository.push("origin", branch_name)
       branch_name
     else
