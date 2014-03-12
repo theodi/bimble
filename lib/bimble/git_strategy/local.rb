@@ -2,15 +2,16 @@ require 'git'
 require 'date'
 require 'github_api'
 
-class Bimble::Local
+class Bimble::GitStrategy::Local
 
-  def initialize(oauth_token)
+  def initialize(git_url, oauth_token)
     @github = Github.new oauth_token: oauth_token
+    @git_url = git_url
   end
 
   def update(repo)
     Dir.mktmpdir do |tmpdir|
-      repo = Git.clone(ARGV[0], tmpdir)
+      repo = Git.clone(@git_url, tmpdir)
       Dir.chdir(tmpdir) do
         if File.exists?("Gemfile")
           `bundle update`
