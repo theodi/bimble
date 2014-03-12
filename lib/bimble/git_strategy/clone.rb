@@ -24,11 +24,11 @@ class Bimble::GitStrategy::Clone
 
   def commit_to_new_branch(repo)
     if repo.status.changed.keys.include? "Gemfile.lock"
-      branch = "update-dependencies-#{Date.today.to_s}"
+      branch = Bimble.branch_name
       repo.branch(branch).create
       repo.checkout(branch)
       repo.add("Gemfile.lock")
-      repo.commit("automatically updated dependencies")  
+      repo.commit(Bimble.commit_message)  
       repo.push("origin", branch)
       branch
     else
@@ -42,9 +42,10 @@ class Bimble::GitStrategy::Clone
       if matches
         user, repo_name = matches[1], matches[2]
         @github.pull_requests.create user, repo_name,
-                                     title: "automatically updated dependencies",
-                                     head: "#{user}:#{branch}",
-                                     base: "master"
+                                     title: Bimble.pull_request_title,
+                                     body:  Bimble.pull_request_body,
+                                     head:  "#{user}:#{branch}",
+                                     base:  "master"
       end
     end
   end

@@ -21,7 +21,7 @@ class Bimble::GitStrategy::GithubApi
     blob_sha = create_blob(content)
     tree_sha = add_blob_to_tree(blob_sha, name)
     commit_sha = commit(tree_sha)
-    branch_name = "update-dependencies-#{Date.today.to_s}"
+    branch_name = Bimble.branch_name
     create_branch(branch_name, commit_sha)
     open_pr(branch_name, default_branch)
   end
