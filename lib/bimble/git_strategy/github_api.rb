@@ -1,15 +1,10 @@
-require 'github_api'
-
 class Bimble::GitStrategy::GithubApi
+  
   include Bimble::Helpers::Github
   
   def initialize(git_url, oauth_token)
-    @github = Github.new oauth_token: oauth_token
-    match = git_url.match /github.com[:\/]([^\/]*)\/([^\.]*)/
-    if match 
-      @user = match[1]
-      @repo = match[2]
-    end
+    @git_url = git_url
+    @oauth_token = oauth_token
   end
 
   def get_file(name)

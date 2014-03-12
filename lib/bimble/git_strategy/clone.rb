@@ -1,52 +1,38 @@
 require 'git'
-require 'date'
-require 'github_api'
 
 class Bimble::GitStrategy::Clone
 
+  include Bimble::Helpers::Github
+
   def initialize(git_url, oauth_token)
-    @github = Github.new oauth_token: oauth_token if oauth_token
     @git_url = git_url
+    @oauth_token = oauth_token
   end
 
-  def update(repo)
+  def update
     Dir.mktmpdir do |tmpdir|
-      repo = Git.clone(@git_url, tmpdir)
+      repository = Git.clone(@git_url, tmpdir)
       Dir.chdir(tmpdir) do
         if File.exists?("Gemfile")
           `bundle update`
-          branch = commit_to_new_branch(repo)
-          open_pull_request(repo, branch) if branch
+          branch = commit_to_new_branch(repository)
+          open_pr(branch, "master") if branch
         end
       end
     end
   end
 
-  def commit_to_new_branch(repo)
-    if repo.status.changed.keys.include? "Gemfile.lock"
+  def commit_to_new_branch(repository)
+    if repository.status.changed.keys.include? "Gemfile.lock"
       branch = Bimble.branch_name
-      repo.branch(branch).create
-      repo.checkout(branch)
-      repo.add("Gemfile.lock")
-      repo.commit(Bimble.commit_message)  
-      repo.push("origin", branch)
+      repository.branch(branch).create
+      repository.checkout(branch)
+      repository.add("Gemfile.lock")
+      repository.commit(Bimble.commit_message)  
+      repository.push("origin", branch)
       branch
     else
       nil
-    end
-  end
-
-  def open_pull_request(repo, branch)
-    if @github
-      matches = repo.remote("origin").url.match(/\A.+:(.+?)\/([^\.]+).*\Z/)
-      if matches
-        user, repo_name = matches[1], matches[2]
-        @github.pull_requests.create user, repo_name,
-                                     title: Bimble.pull_request_title,
-                                     body:  Bimble.pull_request_body,
-                                     head:  "#{user}:#{branch}",
-                                     base:  "master"
-      end
     end
   end
 

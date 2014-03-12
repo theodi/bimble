@@ -6,20 +6,39 @@ module Bimble::Helpers::Github
   
   extend Memoist
 
+  GITHUB_REPO_REGEX = /github.com[:\/]([^\/]*)\/([^\.]*)/
+
+  def github
+    Github.new oauth_token: @oauth_token
+  end
+  memoize :github
+
+  def user
+    match = @git_url.match GITHUB_REPO_REGEX
+    match ? match[1] : nil
+  end
+  memoize :user
+  
+  def repo
+    match = @git_url.match GITHUB_REPO_REGEX
+    match ? match[2] : nil
+  end
+  memoize :repo
+
   def default_branch
-    repo = @github.repos.get @user, @repo
-    repo.default_branch
+    repository = github.repos.get user, repo
+    repository.default_branch
   end
   memoize :default_branch
 
   def latest_commit(branch_name)
-    branch_data = @github.repos.branch @user, @repo, branch_name
+    branch_data = github.repos.branch user, repo, branch_name
     branch_data['commit']['sha']
   end
   memoize :latest_commit
 
   def tree(branch)
-    @github.git_data.trees.get @user, @repo, branch
+    github.git_data.trees.get user, repo, branch
   end
 
   def blob_sha(branch, path)
@@ -28,7 +47,7 @@ module Bimble::Helpers::Github
   end
   
   def blob_content(sha)
-    blob = @github.git_data.blobs.get @user, @repo, sha
+    blob = github.git_data.blobs.get user, repo, sha
     if blob['encoding'] == 'base64'
       Base64.decode64(blob['content'])
     else
@@ -37,13 +56,13 @@ module Bimble::Helpers::Github
   end
 
   def create_blob(content)
-    blob = @github.git_data.blobs.create @user, @repo, "content" => content, "encoding" => "utf-8"
+    blob = github.git_data.blobs.create user, repo, "content" => content, "encoding" => "utf-8"
     blob['sha']
   end
 
   def add_blob_to_tree(sha, filename)
     tree = tree default_branch
-    new_tree = @github.git_data.trees.create @user, @repo, "base_tree" => tree['sha'], "tree" => [
+    new_tree = github.git_data.trees.create user, repo, "base_tree" => tree['sha'], "tree" => [
       "path" => filename,
       "mode" => "100644",
       "type" => "blob",
@@ -54,19 +73,19 @@ module Bimble::Helpers::Github
 
   def commit(sha)
     parent = latest_commit(default_branch)
-    commit = @github.git_data.commits.create @user, @repo, "message" => Bimble.commit_message,
+    commit = github.git_data.commits.create user, repo, "message" => Bimble.commit_message,
               "parents" => [parent],
               "tree" => sha
     commit['sha']
   end
   
   def create_branch(name, sha)
-    branch = @github.git_data.references.create @user, @repo, "ref" => "refs/heads/#{name}", "sha" => sha
+    branch = github.git_data.references.create user, repo, "ref" => "refs/heads/#{name}", "sha" => sha
     branch['ref']
   end
 
   def open_pr(head, base)
-    @github.pull_requests.create @user, @repo,
+    github.pull_requests.create user, repo,
       "title" => Bimble.pull_request_title,
       "body" => Bimble.pull_request_body,
       "head" => head,
