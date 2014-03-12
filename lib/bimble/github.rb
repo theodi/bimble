@@ -5,10 +5,13 @@ require 'memoist'
 class Bimble::Github
   extend Memoist
   
-  def initialize(user, repo, oauth_token)
+  def initialize(git_url, oauth_token)
     @github = Github.new oauth_token: oauth_token
-    @user = user
-    @repo = repo
+    match = git_url.match /github.com[:\/]([^\/]*)\/([^\.]*)/
+    if match 
+      @user = match[1]
+      @repo = match[2]
+    end
   end
 
   def get_file(name)

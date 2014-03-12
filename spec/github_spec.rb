@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Bimble::Github, :vcr do
   
   before :all do
-    @remote = Bimble::Github.new('Floppy', 'bimble-test', ENV['GITHUB_OAUTH_TOKEN'])
+    @remote = Bimble::Github.new('git@github.com:Floppy/bimble-test.git', ENV['GITHUB_OAUTH_TOKEN'])
   end
   
   it "should be able to fetch the default branch for a repo" do
