@@ -2,7 +2,7 @@ require 'base64'
 require 'github_api'
 require 'memoist'
 
-class Bimble::GitStrategy::Github
+class Bimble::GitStrategy::GithubApi
   extend Memoist
   
   def initialize(git_url, oauth_token)

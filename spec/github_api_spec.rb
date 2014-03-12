@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Bimble::GitStrategy::Github, :vcr do
+describe Bimble::GitStrategy::GithubApi, :vcr do
   
   before :all do
-    @remote = Bimble::GitStrategy::Github.new('git@github.com:Floppy/bimble-test.git', ENV['GITHUB_OAUTH_TOKEN'])
+    @remote = Bimble::GitStrategy::GithubApi.new('git@github.com:Floppy/bimble-test.git', ENV['GITHUB_OAUTH_TOKEN'])
   end
   
   it "should be able to fetch the default branch for a repo" do

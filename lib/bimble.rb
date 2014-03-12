@@ -6,5 +6,5 @@ module Bimble
 end
 
 require "bimble/version"
-require "bimble/git_strategy/local"
-require "bimble/git_strategy/github"
+require "bimble/git_strategy/clone"
+require "bimble/git_strategy/github_api"

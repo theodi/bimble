@@ -2,7 +2,7 @@ require 'git'
 require 'date'
 require 'github_api'
 
-class Bimble::GitStrategy::Local
+class Bimble::GitStrategy::Clone
 
   def initialize(git_url, oauth_token)
     @github = Github.new oauth_token: oauth_token if oauth_token
