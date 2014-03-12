@@ -3,7 +3,8 @@ require 'spec_helper'
 describe Bimble::GitStrategy::GithubApi, :vcr do
   
   before :all do
-    @remote = Bimble::GitStrategy::GithubApi.new('git@github.com:Floppy/bimble-test.git', ENV['GITHUB_OAUTH_TOKEN'])
+    @remote = Bimble.create(:github_api, git_url: 'git@github.com:Floppy/bimble-test.git', 
+                                         github_oauth_token: ENV['GITHUB_OAUTH_TOKEN'])
   end
   
   it "should be able to fetch the default branch for a repo" do
