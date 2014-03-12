@@ -5,7 +5,7 @@ require 'github_api'
 class Bimble::GitStrategy::Local
 
   def initialize(git_url, oauth_token)
-    @github = Github.new oauth_token: oauth_token
+    @github = Github.new oauth_token: oauth_token if oauth_token
     @git_url = git_url
   end
 
@@ -37,13 +37,15 @@ class Bimble::GitStrategy::Local
   end
 
   def open_pull_request(repo, branch)
-    matches = repo.remote("origin").url.match(/\A.+:(.+?)\/([^\.]+).*\Z/)
-    if matches
-      user, repo_name = matches[1], matches[2]
-      @github.pull_requests.create user, repo_name,
-                                   title: "automatically updated dependencies",
-                                   head: "#{user}:#{branch}",
-                                   base: "master"
+    if @github
+      matches = repo.remote("origin").url.match(/\A.+:(.+?)\/([^\.]+).*\Z/)
+      if matches
+        user, repo_name = matches[1], matches[2]
+        @github.pull_requests.create user, repo_name,
+                                     title: "automatically updated dependencies",
+                                     head: "#{user}:#{branch}",
+                                     base: "master"
+      end
     end
   end
 
