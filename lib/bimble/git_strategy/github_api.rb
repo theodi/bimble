@@ -9,7 +9,7 @@ class Bimble::GitStrategy::GithubApi
   end
 
   def get_file(name)
-    sha = blob_sha(default_branch, name)
+    sha = blob_shas(default_branch, name)[name]
     content = blob_content(sha)
   end
   
