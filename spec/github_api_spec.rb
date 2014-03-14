@@ -62,7 +62,8 @@ describe Bimble::GitStrategy::GithubApi, :vcr do
   end
   
   it "should be able to update Gemfile.lock and open PR all in one go" do
-    pr = @remote.instance_eval { commit_file("Gemfile.lock", "new content") }
+    @remote.instance_eval { commit_file("Gemfile.lock", "new content") }
+    pr = @remote.instance_eval { open_pr(branch_name, default_branch) }
     pr.number.should == 7
   end
   

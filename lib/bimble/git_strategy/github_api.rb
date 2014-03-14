@@ -20,8 +20,6 @@ class Bimble::GitStrategy::GithubApi
     end
   end
 
-  private
-
   def get_files(name)
     blobs = blob_shas(default_branch, name)
     Hash[blobs.map{|x| [x[0], blob_content(x[1])]}]
@@ -31,12 +29,15 @@ class Bimble::GitStrategy::GithubApi
     get_files(name)[name]
   end
   
+  def commit_to_new_branch
+    commit_file("Gemfile.lock", File.read("Gemfile.lock"))
+  end
+  
   def commit_file(name, content)    
     blob_sha = create_blob(content)
     tree_sha = add_blob_to_tree(blob_sha, name)
     commit_sha = commit(tree_sha)
     create_branch(branch_name, commit_sha)
-    open_pr(branch_name, default_branch)
   end
 
 end
