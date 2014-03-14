@@ -1,8 +1,8 @@
 module Bimble
   
-  def self.update
+  def self.bundle_update
     if File.exists?("Gemfile")
-      `bundle update`
+      puts `bundle list`
     end
   end
   

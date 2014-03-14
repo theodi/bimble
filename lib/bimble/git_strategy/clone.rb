@@ -12,7 +12,7 @@ class Bimble::GitStrategy::Clone
 
   def update
     in_working_copy do
-      Bimble.update
+      Bimble.bundle_update
       if lockfile_changed?
         branch = commit_to_new_branch
         open_pr(branch, "master") if @oauth_token
