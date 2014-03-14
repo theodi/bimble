@@ -8,6 +8,17 @@ class Bimble::GitStrategy::GithubApi
     @oauth_token = oauth_token
   end
 
+  def update
+    in_working_copy do
+      Bimble.bundle_update
+      if lockfile_changed?
+        commit_to_new_branch
+        @pr = open_pr(branch_name, default_branch) if @oauth_token
+      end
+    end
+    @pr ? @pr['html_url'] : nil
+  end
+
   def in_working_copy
     Dir.mktmpdir do |tmpdir|
       # Get files
