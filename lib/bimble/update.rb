@@ -1,10 +1,8 @@
 module Bimble
   
-  def self.update(dir)
-    Dir.chdir(dir) do
-      if File.exists?("Gemfile")
-        `bundle update`
-      end
+  def self.update
+    if File.exists?("Gemfile")
+      `bundle update`
     end
   end
   
