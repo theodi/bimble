@@ -16,7 +16,15 @@ describe Bimble::GitStrategy::GithubApi, :vcr do
   end
 
   it "should be able to get a blob sha for a file on a branch" do
-    @remote.blob_sha('master', 'Gemfile').should == '971ea446b4dd814d3e1a59f2df9f52d911e60168'
+    @remote.blob_shas('master', 'Gemfile').should == { "Gemfile" => '971ea446b4dd814d3e1a59f2df9f52d911e60168' }
+    @remote.blob_shas('master', 'Gemfile.lock').should == { "Gemfile.lock" => '3d77996b4520655a4d90665c6825ede135b87751' }
+  end
+  
+  it "should be able to get a blob sha for files matching a regexp on a branch" do
+    @remote.blob_shas('master', 'Gemfile.*').should == { 
+      "Gemfile" => '971ea446b4dd814d3e1a59f2df9f52d911e60168',
+      "Gemfile.lock" => '3d77996b4520655a4d90665c6825ede135b87751'
+    }
   end
 
   it "should be able to get the content of the Gemfile blob" do

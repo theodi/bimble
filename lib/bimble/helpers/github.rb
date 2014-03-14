@@ -40,10 +40,11 @@ module Bimble::Helpers::Github
   def tree(branch)
     github.git_data.trees.get user, repo, branch
   end
+  memoize :tree
 
-  def blob_sha(branch, path)
+  def blob_shas(branch, path)
     tree = tree branch
-    tree['tree'].find{|x| x['path'] == path && x['type'] == 'blob'}.sha rescue nil
+    Hash[tree['tree'].select{|x| x['path'] =~ /^#{path}$/ && x['type'] == 'blob'}.map{|x| [x.path, x.sha]}]
   end
   
   def blob_content(sha)

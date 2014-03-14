@@ -8,9 +8,13 @@ class Bimble::GitStrategy::GithubApi
     @oauth_token = oauth_token
   end
 
+  def get_files(name)
+    blobs = blob_shas(default_branch, name)
+    Hash[blobs.map{|x| [x[0], blob_content(x[1])]}]
+  end
+  
   def get_file(name)
-    sha = blob_sha(default_branch, name)
-    content = blob_content(sha)
+    get_files(name)[name]
   end
   
   def commit_file(name, content)    
