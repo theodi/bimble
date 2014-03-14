@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 [
-  :clone,
+  #:clone,
   :github_api,
 ].each do |strategy|
 
