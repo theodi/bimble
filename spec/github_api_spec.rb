@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Bimble::GitStrategy::GithubApi, :vcr do
   
-  before :all do
+  before :each do
     @remote = Bimble.create(:github_api, git_url: 'git@github.com:Floppy/bimble-test.git', 
                                          github_oauth_token: ENV['GITHUB_OAUTH_TOKEN'])
   end
@@ -63,7 +63,7 @@ describe Bimble::GitStrategy::GithubApi, :vcr do
   
   it "should be able to update Gemfile.lock and open PR all in one go" do
     pr = @remote.instance_eval { commit_file("Gemfile.lock", "new content") }
-    pr.number.should == 5
+    pr.number.should == 7
   end
   
 end

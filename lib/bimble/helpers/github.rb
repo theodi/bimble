@@ -46,6 +46,7 @@ module Bimble::Helpers::Github
     tree = tree branch
     Hash[tree['tree'].select{|x| x['path'] =~ /^#{path}$/ && x['type'] == 'blob'}.map{|x| [x.path, x.sha]}]
   end
+  memoize :blob_shas
   
   def blob_content(sha)
     blob = github.git_data.blobs.get user, repo, sha
@@ -55,6 +56,8 @@ module Bimble::Helpers::Github
       blob['content']
     end
   end
+  memoize :blob_content
+  
 
   def create_blob(content)
     blob = github.git_data.blobs.create user, repo, "content" => content, "encoding" => "utf-8"
