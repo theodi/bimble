@@ -13,27 +13,23 @@ class Bimble::GitStrategy::Clone
   def update
     Dir.mktmpdir do |tmpdir|
       repository = Git.clone(@git_url, tmpdir)
-      Dir.chdir(tmpdir) do
-        if File.exists?("Gemfile")
-          `bundle update`
-          branch = commit_to_new_branch(repository)
-          open_pr(branch, "master") if branch
-        end
+      Bimble.update(tmpdir)
+      if repository.status.changed.keys.include? "Gemfile.lock"
+        branch = commit_to_new_branch(repository)
+        open_pr(branch, "master")
       end
     end
   end
 
+  private
+
   def commit_to_new_branch(repository)
-    if repository.status.changed.keys.include? "Gemfile.lock"
-      repository.branch(branch_name).create
-      repository.checkout(branch_name)
-      repository.add("Gemfile.lock")
-      repository.commit(commit_message)  
-      repository.push("origin", branch_name)
-      branch_name
-    else
-      nil
-    end
+    repository.branch(branch_name).create
+    repository.checkout(branch_name)
+    repository.add("Gemfile.lock")
+    repository.commit(commit_message)  
+    repository.push("origin", branch_name)
+    branch_name
   end
 
 end
