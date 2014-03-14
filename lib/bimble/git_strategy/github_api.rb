@@ -10,11 +10,16 @@ class Bimble::GitStrategy::GithubApi
 
   def in_working_copy
     Dir.mktmpdir do |tmpdir|
+      # Get files
       files = get_files("Gemfile.*").merge(get_files(".*gemspec"))
       Dir.chdir(tmpdir) do
+        # Write files
         files.each_pair do |name, content|
           File.open(name, 'w') {|f| f.write(content) }
         end
+        # Store md5 of lockfile
+        @original_md5 = Digest::MD5.hexdigest(File.read("Gemfile.lock"))
+        # Do the business
         yield
       end
     end
@@ -23,6 +28,14 @@ class Bimble::GitStrategy::GithubApi
   def get_files(name)
     blobs = blob_shas(default_branch, name)
     Hash[blobs.map{|x| [x[0], blob_content(x[1])]}]
+  end
+  
+  def lock_md5
+    Digest::MD5.hexdigest(File.read("Gemfile.lock"))
+  end
+  
+  def lockfile_changed?
+    lock_md5 != @original_md5
   end
   
   def get_file(name)
