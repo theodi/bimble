@@ -14,22 +14,22 @@ class Bimble::GitStrategy::Clone
     in_working_copy do
       Bimble.bundle_update
       if lockfile_changed?
-        branch = commit_to_new_branch
-        open_pr(branch, "master") if @oauth_token
+        commit_to_new_branch
+        @pr = open_pr(branch_name, default_branch) if @oauth_token
       end
     end
+    @pr ? @pr['html_url'] : nil
   end
 
   def in_working_copy
     Dir.mktmpdir do |tmpdir|
       @repository = Git.clone(@git_url, tmpdir)
+      @default_branch = @repository.branch
       Dir.chdir(tmpdir) do
         yield
       end
     end
   end
-
-  private
 
   def lockfile_changed?
     @repository.status.changed.keys.include? "Gemfile.lock"
@@ -41,7 +41,10 @@ class Bimble::GitStrategy::Clone
     @repository.add("Gemfile.lock")
     @repository.commit(commit_message)  
     @repository.push("origin", branch_name)
-    branch_name
+  end
+
+  def default_branch
+    @default_branch
   end
 
 end
