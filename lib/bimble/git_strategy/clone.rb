@@ -4,21 +4,11 @@ class Bimble::GitStrategy::Clone
 
   include Bimble::Helpers::Strings
   include Bimble::Helpers::Github
+  include Bimble::Helpers::Updater
 
   def initialize(git_url, oauth_token)
     @git_url = git_url
     @oauth_token = oauth_token
-  end
-
-  def update
-    in_working_copy do
-      Bimble.bundle_update
-      if lockfile_changed?
-        commit_to_new_branch
-        @pr = open_pr(branch_name, default_branch) if @oauth_token
-      end
-    end
-    @pr ? @pr['html_url'] : nil
   end
 
   def in_working_copy
