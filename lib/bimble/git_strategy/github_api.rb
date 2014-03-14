@@ -8,6 +8,20 @@ class Bimble::GitStrategy::GithubApi
     @oauth_token = oauth_token
   end
 
+  def in_working_copy
+    Dir.mktmpdir do |tmpdir|
+      files = get_files("Gemfile.*").merge(get_files(".*gemspec"))
+      Dir.chdir(tmpdir) do
+        files.each_pair do |name, content|
+          File.open(name, 'w') {|f| f.write(content) }
+        end
+        yield
+      end
+    end
+  end
+
+  private
+
   def get_files(name)
     blobs = blob_shas(default_branch, name)
     Hash[blobs.map{|x| [x[0], blob_content(x[1])]}]
