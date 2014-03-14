@@ -1,6 +1,76 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://api.github.com/repos/Floppy/bimble-test/git/blobs?access_token=<GITHUB_OAUTH_TOKEN>
+    body:
+      encoding: UTF-8
+      string: "{\"content\":\"new content\",\"encoding\":\"utf-8\"}"
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.11.3
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token="<GITHUB_OAUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Fri, 14 Mar 2014 14:00:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 201 Created
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4805'
+      X-Ratelimit-Reset:
+      - '1394809216'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Etag:
+      - "\"296ef275fbcd0dd9a2f183e18843eed4\""
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Location:
+      - https://api.github.com/repos/Floppy/bimble-test/git/blobs/47d2739ba2c34690248c8f91b84bb54e8936899a
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '157'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 519F8646:0ED9:1642B5D:53230B6F
+    body:
+      encoding: UTF-8
+      string: "{\"sha\":\"47d2739ba2c34690248c8f91b84bb54e8936899a\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/47d2739ba2c34690248c8f91b84bb54e8936899a\"}"
+    http_version: 
+  recorded_at: Fri, 14 Mar 2014 14:00:18 GMT
+- request:
     method: get
     uri: https://api.github.com/repos/Floppy/bimble-test?access_token=<GITHUB_OAUTH_TOKEN>
     body:
@@ -25,7 +95,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 11 Mar 2014 16:58:34 GMT
+      - Fri, 14 Mar 2014 14:00:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,15 +105,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4791'
+      - '4804'
       X-Ratelimit-Reset:
-      - '1394560714'
+      - '1394809216'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Last-Modified:
-      - Tue, 11 Mar 2014 16:57:15 GMT
+      - Fri, 14 Mar 2014 13:58:02 GMT
       Etag:
-      - "\"25f6eb33b7a425b0467dfe637430a3da\""
+      - "\"c4d65c796823ed196964450e388e8fb5\""
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
@@ -63,12 +133,12 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 519F8646:31E8:1ED2866:531F40BA
+      - 519F8646:0ED8:10BE646:53230B70
     body:
       encoding: UTF-8
-      string: "{\"id\":17630125,\"name\":\"bimble-test\",\"full_name\":\"Floppy/bimble-test\",\"owner\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"private\":false,\"html_url\":\"https://github.com/Floppy/bimble-test\",\"description\":\"\",\"fork\":false,\"url\":\"https://api.github.com/repos/Floppy/bimble-test\",\"forks_url\":\"https://api.github.com/repos/Floppy/bimble-test/forks\",\"keys_url\":\"https://api.github.com/repos/Floppy/bimble-test/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/Floppy/bimble-test/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/Floppy/bimble-test/teams\",\"hooks_url\":\"https://api.github.com/repos/Floppy/bimble-test/hooks\",\"issue_events_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/Floppy/bimble-test/events\",\"assignees_url\":\"https://api.github.com/repos/Floppy/bimble-test/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/Floppy/bimble-test/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/tags\",\"blobs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/Floppy/bimble-test/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/Floppy/bimble-test/languages\",\"stargazers_url\":\"https://api.github.com/repos/Floppy/bimble-test/stargazers\",\"contributors_url\":\"https://api.github.com/repos/Floppy/bimble-test/contributors\",\"subscribers_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscription\",\"commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/comments/{number}\",\"contents_url\":\"https://api.github.com/repos/Floppy/bimble-test/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/Floppy/bimble-test/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/Floppy/bimble-test/merges\",\"archive_url\":\"https://api.github.com/repos/Floppy/bimble-test/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/Floppy/bimble-test/downloads\",\"issues_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/Floppy/bimble-test/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Floppy/bimble-test/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/Floppy/bimble-test/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/Floppy/bimble-test/releases{/id}\",\"created_at\":\"2014-03-11T12:49:15Z\",\"updated_at\":\"2014-03-11T16:57:15Z\",\"pushed_at\":\"2014-03-11T16:57:14Z\",\"git_url\":\"git://github.com/Floppy/bimble-test.git\",\"ssh_url\":\"git@github.com:Floppy/bimble-test.git\",\"clone_url\":\"https://github.com/Floppy/bimble-test.git\",\"svn_url\":\"https://github.com/Floppy/bimble-test\",\"homepage\":null,\"size\":0,\"stargazers_count\":0,\"watchers_count\":0,\"language\":\"Ruby\",\"has_issues\":true,\"has_downloads\":true,\"has_wiki\":true,\"forks_count\":0,\"mirror_url\":null,\"open_issues_count\":0,\"forks\":0,\"open_issues\":0,\"watchers\":0,\"default_branch\":\"master\",\"permissions\":{\"admin\":true,\"push\":true,\"pull\":true},\"network_count\":0,\"subscribers_count\":0}"
+      string: "{\"id\":17630125,\"name\":\"bimble-test\",\"full_name\":\"Floppy/bimble-test\",\"owner\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"private\":false,\"html_url\":\"https://github.com/Floppy/bimble-test\",\"description\":\"\",\"fork\":false,\"url\":\"https://api.github.com/repos/Floppy/bimble-test\",\"forks_url\":\"https://api.github.com/repos/Floppy/bimble-test/forks\",\"keys_url\":\"https://api.github.com/repos/Floppy/bimble-test/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/Floppy/bimble-test/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/Floppy/bimble-test/teams\",\"hooks_url\":\"https://api.github.com/repos/Floppy/bimble-test/hooks\",\"issue_events_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/Floppy/bimble-test/events\",\"assignees_url\":\"https://api.github.com/repos/Floppy/bimble-test/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/Floppy/bimble-test/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/tags\",\"blobs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/Floppy/bimble-test/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/Floppy/bimble-test/languages\",\"stargazers_url\":\"https://api.github.com/repos/Floppy/bimble-test/stargazers\",\"contributors_url\":\"https://api.github.com/repos/Floppy/bimble-test/contributors\",\"subscribers_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscription\",\"commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/comments/{number}\",\"contents_url\":\"https://api.github.com/repos/Floppy/bimble-test/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/Floppy/bimble-test/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/Floppy/bimble-test/merges\",\"archive_url\":\"https://api.github.com/repos/Floppy/bimble-test/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/Floppy/bimble-test/downloads\",\"issues_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/Floppy/bimble-test/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Floppy/bimble-test/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/Floppy/bimble-test/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/Floppy/bimble-test/releases{/id}\",\"created_at\":\"2014-03-11T12:49:15Z\",\"updated_at\":\"2014-03-14T13:58:02Z\",\"pushed_at\":\"2014-03-14T13:58:01Z\",\"git_url\":\"git://github.com/Floppy/bimble-test.git\",\"ssh_url\":\"git@github.com:Floppy/bimble-test.git\",\"clone_url\":\"https://github.com/Floppy/bimble-test.git\",\"svn_url\":\"https://github.com/Floppy/bimble-test\",\"homepage\":null,\"size\":0,\"stargazers_count\":0,\"watchers_count\":0,\"language\":\"Ruby\",\"has_issues\":true,\"has_downloads\":true,\"has_wiki\":true,\"forks_count\":0,\"mirror_url\":null,\"open_issues_count\":0,\"forks\":0,\"open_issues\":0,\"watchers\":0,\"default_branch\":\"master\",\"permissions\":{\"admin\":true,\"push\":true,\"pull\":true},\"network_count\":0,\"subscribers_count\":0}"
     http_version: 
-  recorded_at: Tue, 11 Mar 2014 16:58:34 GMT
+  recorded_at: Fri, 14 Mar 2014 14:00:19 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/Floppy/bimble-test/git/trees/master?access_token=<GITHUB_OAUTH_TOKEN>
@@ -94,7 +164,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 11 Mar 2014 16:58:34 GMT
+      - Fri, 14 Mar 2014 14:00:17 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -104,15 +174,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4790'
+      - '4803'
       X-Ratelimit-Reset:
-      - '1394560714'
+      - '1394809217'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Last-Modified:
-      - Tue, 11 Mar 2014 16:57:15 GMT
+      - Fri, 14 Mar 2014 13:58:02 GMT
       Etag:
-      - "\"25f6eb33b7a425b0467dfe637430a3da\""
+      - "\"c4d65c796823ed196964450e388e8fb5\""
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
@@ -132,225 +202,18 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 519F8646:31E7:1A8114C:531F40BA
+      - 519F8646:0ED9:1642D46:53230B70
     body:
       encoding: UTF-8
       string: "{\"sha\":\"master\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees/master\",\"tree\":[{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"971ea446b4dd814d3e1a59f2df9f52d911e60168\",\"path\":\"Gemfile\",\"size\":79,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/971ea446b4dd814d3e1a59f2df9f52d911e60168\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"3d77996b4520655a4d90665c6825ede135b87751\",\"path\":\"Gemfile.lock\",\"size\":102,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/3d77996b4520655a4d90665c6825ede135b87751\"}]}"
     http_version: 
-  recorded_at: Tue, 11 Mar 2014 16:58:35 GMT
-- request:
-    method: get
-    uri: https://api.github.com/repos/Floppy/bimble-test/git/blobs/971ea446b4dd814d3e1a59f2df9f52d911e60168?access_token=<GITHUB_OAUTH_TOKEN>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
-      Accept-Charset:
-      - utf-8
-      User-Agent:
-      - Github Ruby Gem 0.11.3
-      Authorization:
-      - Token token="<GITHUB_OAUTH_TOKEN>"
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Tue, 11 Mar 2014 16:58:35 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Status:
-      - 200 OK
-      X-Ratelimit-Limit:
-      - '5000'
-      X-Ratelimit-Remaining:
-      - '4789'
-      X-Ratelimit-Reset:
-      - '1394560715'
-      Cache-Control:
-      - private, max-age=60, s-maxage=60
-      Etag:
-      - "\"086d5a47259b2ea86367784a005cf9b4\""
-      X-Oauth-Scopes:
-      - repo
-      X-Accepted-Oauth-Scopes:
-      - ''
-      Vary:
-      - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
-      X-Github-Media-Type:
-      - github.v3; format=json
-      X-Content-Type-Options:
-      - nosniff
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Github-Request-Id:
-      - 519F8646:31E8:1ED2AD8:531F40BB
-    body:
-      encoding: UTF-8
-      string: "{\"sha\":\"971ea446b4dd814d3e1a59f2df9f52d911e60168\",\"size\":79,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/971ea446b4dd814d3e1a59f2df9f52d911e60168\",\"content\":\"c291cmNlICJodHRwczovL3J1YnlnZW1zLm9yZyIKCiNydWJ5PTIuMS4wCiNy\\ndWJ5LWdlbXNldD1iaW1ibGUtdGVzdAoKZ2VtICdyYWtlJw==\\n\",\"encoding\":\"base64\"}"
-    http_version: 
-  recorded_at: Tue, 11 Mar 2014 16:58:35 GMT
-- request:
-    method: post
-    uri: https://api.github.com/repos/Floppy/bimble-test/git/blobs?access_token=<GITHUB_OAUTH_TOKEN>
-    body:
-      encoding: UTF-8
-      string: "{\"content\":\"'ekar' meg\\n\\ntset-elbmib=tesmeg-ybur#\\n0.1.2=ybur#\\n\\n\\\"gro.smegybur//:sptth\\\"
-        ecruos\",\"encoding\":\"utf-8\"}"
-    headers:
-      Accept:
-      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
-      Accept-Charset:
-      - utf-8
-      User-Agent:
-      - Github Ruby Gem 0.11.3
-      Content-Type:
-      - application/json
-      Authorization:
-      - Token token="<GITHUB_OAUTH_TOKEN>"
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Tue, 11 Mar 2014 16:58:35 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Status:
-      - 201 Created
-      X-Ratelimit-Limit:
-      - '5000'
-      X-Ratelimit-Remaining:
-      - '4788'
-      X-Ratelimit-Reset:
-      - '1394560715'
-      Cache-Control:
-      - private, max-age=60, s-maxage=60
-      Etag:
-      - "\"7983484aa7f7af642cd267594bfd3485\""
-      X-Oauth-Scopes:
-      - repo
-      X-Accepted-Oauth-Scopes:
-      - ''
-      Location:
-      - https://api.github.com/repos/Floppy/bimble-test/git/blobs/757ca5b8f1c3849e1002adc7bfb444d5cf6ae87f
-      Vary:
-      - Accept, Authorization, Cookie, X-GitHub-OTP
-      X-Github-Media-Type:
-      - github.v3; format=json
-      X-Content-Type-Options:
-      - nosniff
-      Content-Length:
-      - '157'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Github-Request-Id:
-      - 519F8646:31E6:140E59A:531F40BB
-    body:
-      encoding: UTF-8
-      string: "{\"sha\":\"757ca5b8f1c3849e1002adc7bfb444d5cf6ae87f\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/757ca5b8f1c3849e1002adc7bfb444d5cf6ae87f\"}"
-    http_version: 
-  recorded_at: Tue, 11 Mar 2014 16:58:36 GMT
-- request:
-    method: get
-    uri: https://api.github.com/repos/Floppy/bimble-test/git/trees/master?access_token=<GITHUB_OAUTH_TOKEN>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
-      Accept-Charset:
-      - utf-8
-      User-Agent:
-      - Github Ruby Gem 0.11.3
-      Authorization:
-      - Token token="<GITHUB_OAUTH_TOKEN>"
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Tue, 11 Mar 2014 16:58:36 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Status:
-      - 200 OK
-      X-Ratelimit-Limit:
-      - '5000'
-      X-Ratelimit-Remaining:
-      - '4787'
-      X-Ratelimit-Reset:
-      - '1394560716'
-      Cache-Control:
-      - private, max-age=60, s-maxage=60
-      Last-Modified:
-      - Tue, 11 Mar 2014 16:57:15 GMT
-      Etag:
-      - "\"25f6eb33b7a425b0467dfe637430a3da\""
-      X-Oauth-Scopes:
-      - repo
-      X-Accepted-Oauth-Scopes:
-      - ''
-      Vary:
-      - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
-      X-Github-Media-Type:
-      - github.v3; format=json
-      X-Content-Type-Options:
-      - nosniff
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Expose-Headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Github-Request-Id:
-      - 519F8646:31E4:830B84:531F40BC
-    body:
-      encoding: UTF-8
-      string: "{\"sha\":\"master\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees/master\",\"tree\":[{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"971ea446b4dd814d3e1a59f2df9f52d911e60168\",\"path\":\"Gemfile\",\"size\":79,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/971ea446b4dd814d3e1a59f2df9f52d911e60168\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"3d77996b4520655a4d90665c6825ede135b87751\",\"path\":\"Gemfile.lock\",\"size\":102,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/3d77996b4520655a4d90665c6825ede135b87751\"}]}"
-    http_version: 
-  recorded_at: Tue, 11 Mar 2014 16:58:36 GMT
+  recorded_at: Fri, 14 Mar 2014 14:00:19 GMT
 - request:
     method: post
     uri: https://api.github.com/repos/Floppy/bimble-test/git/trees?access_token=<GITHUB_OAUTH_TOKEN>
     body:
       encoding: UTF-8
-      string: "{\"base_tree\":\"master\",\"tree\":[{\"path\":\"Gemfile.lock\",\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"757ca5b8f1c3849e1002adc7bfb444d5cf6ae87f\"}]}"
+      string: "{\"base_tree\":\"master\",\"tree\":[{\"path\":\"Gemfile.lock\",\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"47d2739ba2c34690248c8f91b84bb54e8936899a\"}]}"
     headers:
       Accept:
       - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
@@ -372,7 +235,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 11 Mar 2014 16:58:37 GMT
+      - Fri, 14 Mar 2014 14:00:17 GMT
       Content-Type:
       - application/json; charset=utf-8
       Status:
@@ -380,19 +243,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4786'
+      - '4802'
       X-Ratelimit-Reset:
-      - '1394560717'
+      - '1394809217'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Etag:
-      - "\"46f19c243bccd654188867d956458039\""
+      - "\"5dcc72a840f291ddc73d55f5c61df109\""
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       Location:
-      - https://api.github.com/repos/Floppy/bimble-test/git/trees/1a6496dbb6821b5753471a47423c0c25aaca9e05
+      - https://api.github.com/repos/Floppy/bimble-test/git/trees/a3ebc2811635a51f9297a456ed1b8cb0abbb5aa3
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       X-Github-Media-Type:
@@ -409,12 +272,12 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 519F8646:31E9:AC6004:531F40BC
+      - 519F8646:0ED8:10BE7EA:53230B71
     body:
       encoding: UTF-8
-      string: "{\"sha\":\"1a6496dbb6821b5753471a47423c0c25aaca9e05\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees/1a6496dbb6821b5753471a47423c0c25aaca9e05\",\"tree\":[{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"971ea446b4dd814d3e1a59f2df9f52d911e60168\",\"path\":\"Gemfile\",\"size\":79,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/971ea446b4dd814d3e1a59f2df9f52d911e60168\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"757ca5b8f1c3849e1002adc7bfb444d5cf6ae87f\",\"path\":\"Gemfile.lock\",\"size\":79,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/757ca5b8f1c3849e1002adc7bfb444d5cf6ae87f\"}]}"
+      string: "{\"sha\":\"a3ebc2811635a51f9297a456ed1b8cb0abbb5aa3\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees/a3ebc2811635a51f9297a456ed1b8cb0abbb5aa3\",\"tree\":[{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"971ea446b4dd814d3e1a59f2df9f52d911e60168\",\"path\":\"Gemfile\",\"size\":79,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/971ea446b4dd814d3e1a59f2df9f52d911e60168\"},{\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"47d2739ba2c34690248c8f91b84bb54e8936899a\",\"path\":\"Gemfile.lock\",\"size\":11,\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs/47d2739ba2c34690248c8f91b84bb54e8936899a\"}]}"
     http_version: 
-  recorded_at: Tue, 11 Mar 2014 16:58:37 GMT
+  recorded_at: Fri, 14 Mar 2014 14:00:20 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/Floppy/bimble-test/branches/master?access_token=<GITHUB_OAUTH_TOKEN>
@@ -440,7 +303,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 11 Mar 2014 16:58:37 GMT
+      - Fri, 14 Mar 2014 14:00:18 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -450,9 +313,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4785'
+      - '4801'
       X-Ratelimit-Reset:
-      - '1394560717'
+      - '1394809218'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Etag:
@@ -476,7 +339,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 519F8646:31E7:1A81660:531F40BD
+      - 519F8646:0EDA:1AD9508:53230B72
     body:
       encoding: UTF-8
       string: "{\"name\":\"master\",\"commit\":{\"sha\":\"97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"commit\":{\"author\":{\"name\":\"James
@@ -484,13 +347,13 @@ http_interactions:
         Smith\",\"email\":\"james@floppy.org.uk\",\"date\":\"2014-03-11T12:51:07Z\"},\"message\":\"test
         gemfile\",\"tree\":{\"sha\":\"5ed8484f4e04996c3a4cf10eba9e24d4ef3a3cbb\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees/5ed8484f4e04996c3a4cf10eba9e24d4ef3a3cbb\"},\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"comment_count\":0},\"url\":\"https://api.github.com/repos/Floppy/bimble-test/commits/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"html_url\":\"https://github.com/Floppy/bimble-test/commit/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/commits/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c/comments\",\"author\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"committer\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"parents\":[]},\"_links\":{\"self\":\"https://api.github.com/repos/Floppy/bimble-test/branches/master\",\"html\":\"https://github.com/Floppy/bimble-test/tree/master\"}}"
     http_version: 
-  recorded_at: Tue, 11 Mar 2014 16:58:37 GMT
+  recorded_at: Fri, 14 Mar 2014 14:00:20 GMT
 - request:
     method: post
     uri: https://api.github.com/repos/Floppy/bimble-test/git/commits?access_token=<GITHUB_OAUTH_TOKEN>
     body:
       encoding: UTF-8
-      string: "{\"message\":\"updated dependencies\",\"parents\":[\"97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\"],\"tree\":\"1a6496dbb6821b5753471a47423c0c25aaca9e05\"}"
+      string: "{\"message\":\"automatically updated dependencies\",\"parents\":[\"97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\"],\"tree\":\"a3ebc2811635a51f9297a456ed1b8cb0abbb5aa3\"}"
     headers:
       Accept:
       - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
@@ -512,7 +375,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 11 Mar 2014 16:58:38 GMT
+      - Fri, 14 Mar 2014 14:00:18 GMT
       Content-Type:
       - application/json; charset=utf-8
       Status:
@@ -520,19 +383,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4784'
+      - '4800'
       X-Ratelimit-Reset:
-      - '1394560718'
+      - '1394809218'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Etag:
-      - "\"7ea57c3f8e347e37f521b5bf743aeab3\""
+      - "\"aa5448614c8c17411bfb251c727e3d48\""
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       Location:
-      - https://api.github.com/repos/Floppy/bimble-test/git/commits/53d36f559e9e79603456e4fade412633ddbd1895
+      - https://api.github.com/repos/Floppy/bimble-test/git/commits/f88f55702a4b1e90b88e07d6fba57ef2f63a8965
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       X-Github-Media-Type:
@@ -540,7 +403,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Content-Length:
-      - '914'
+      - '928'
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Expose-Headers:
@@ -549,21 +412,21 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 519F8646:31E4:830C7D:531F40BD
+      - 519F8646:0ED9:164303C:53230B72
     body:
       encoding: UTF-8
-      string: "{\"sha\":\"53d36f559e9e79603456e4fade412633ddbd1895\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits/53d36f559e9e79603456e4fade412633ddbd1895\",\"html_url\":\"https://github.com/Floppy/bimble-test/commit/53d36f559e9e79603456e4fade412633ddbd1895\",\"author\":{\"name\":\"James
-        Smith\",\"email\":\"james@floppy.org.uk\",\"date\":\"2014-03-11T16:58:38Z\"},\"committer\":{\"name\":\"James
-        Smith\",\"email\":\"james@floppy.org.uk\",\"date\":\"2014-03-11T16:58:38Z\"},\"tree\":{\"sha\":\"1a6496dbb6821b5753471a47423c0c25aaca9e05\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees/1a6496dbb6821b5753471a47423c0c25aaca9e05\"},\"message\":\"updated
-        dependencies\",\"parents\":[{\"sha\":\"97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"html_url\":\"https://github.com/Floppy/bimble-test/commit/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\"}]}"
+      string: "{\"sha\":\"f88f55702a4b1e90b88e07d6fba57ef2f63a8965\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits/f88f55702a4b1e90b88e07d6fba57ef2f63a8965\",\"html_url\":\"https://github.com/Floppy/bimble-test/commit/f88f55702a4b1e90b88e07d6fba57ef2f63a8965\",\"author\":{\"name\":\"James
+        Smith\",\"email\":\"james@floppy.org.uk\",\"date\":\"2014-03-14T14:00:18Z\"},\"committer\":{\"name\":\"James
+        Smith\",\"email\":\"james@floppy.org.uk\",\"date\":\"2014-03-14T14:00:18Z\"},\"tree\":{\"sha\":\"a3ebc2811635a51f9297a456ed1b8cb0abbb5aa3\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees/a3ebc2811635a51f9297a456ed1b8cb0abbb5aa3\"},\"message\":\"automatically
+        updated dependencies\",\"parents\":[{\"sha\":\"97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"html_url\":\"https://github.com/Floppy/bimble-test/commit/97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\"}]}"
     http_version: 
-  recorded_at: Tue, 11 Mar 2014 16:58:38 GMT
+  recorded_at: Fri, 14 Mar 2014 14:00:21 GMT
 - request:
     method: post
     uri: https://api.github.com/repos/Floppy/bimble-test/git/refs?access_token=<GITHUB_OAUTH_TOKEN>
     body:
       encoding: UTF-8
-      string: "{\"ref\":\"refs/heads/update-dependencies\",\"sha\":\"53d36f559e9e79603456e4fade412633ddbd1895\"}"
+      string: "{\"ref\":\"refs/heads/update-dependencies-2014-03-14\",\"sha\":\"f88f55702a4b1e90b88e07d6fba57ef2f63a8965\"}"
     headers:
       Accept:
       - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
@@ -585,7 +448,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 11 Mar 2014 16:58:38 GMT
+      - Fri, 14 Mar 2014 14:00:19 GMT
       Content-Type:
       - application/json; charset=utf-8
       Status:
@@ -593,19 +456,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4783'
+      - '4799'
       X-Ratelimit-Reset:
-      - '1394560718'
+      - '1394809219'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Etag:
-      - "\"0a0f954027a85e9ba09f8097127341ca\""
+      - "\"834c0d661a98a723fef0e6b2f4885451\""
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       Location:
-      - https://api.github.com/repos/Floppy/bimble-test/git/refs/heads/update-dependencies
+      - https://api.github.com/repos/Floppy/bimble-test/git/refs/heads/update-dependencies-2014-03-14
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       X-Github-Media-Type:
@@ -613,7 +476,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Content-Length:
-      - '316'
+      - '338'
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Expose-Headers:
@@ -622,19 +485,19 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 519F8646:31E8:1ED31EA:531F40BE
+      - 519F8646:0ED7:AB8280:53230B73
     body:
       encoding: UTF-8
-      string: "{\"ref\":\"refs/heads/update-dependencies\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/refs/heads/update-dependencies\",\"object\":{\"sha\":\"53d36f559e9e79603456e4fade412633ddbd1895\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits/53d36f559e9e79603456e4fade412633ddbd1895\"}}"
+      string: "{\"ref\":\"refs/heads/update-dependencies-2014-03-14\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/refs/heads/update-dependencies-2014-03-14\",\"object\":{\"sha\":\"f88f55702a4b1e90b88e07d6fba57ef2f63a8965\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits/f88f55702a4b1e90b88e07d6fba57ef2f63a8965\"}}"
     http_version: 
-  recorded_at: Tue, 11 Mar 2014 16:58:38 GMT
+  recorded_at: Fri, 14 Mar 2014 14:00:21 GMT
 - request:
     method: post
     uri: https://api.github.com/repos/Floppy/bimble-test/pulls?access_token=<GITHUB_OAUTH_TOKEN>
     body:
       encoding: UTF-8
-      string: "{\"title\":\"Updated dependencies\",\"body\":\"Automatically generated
-        by bimble\",\"head\":\"update-dependencies\",\"base\":\"master\"}"
+      string: "{\"title\":\"Updated dependencies\",\"body\":\"Automatically updated
+        by Bimble\",\"head\":\"update-dependencies-2014-03-14\",\"base\":\"master\"}"
     headers:
       Accept:
       - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
@@ -656,7 +519,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 11 Mar 2014 16:58:39 GMT
+      - Fri, 14 Mar 2014 14:00:19 GMT
       Content-Type:
       - application/json; charset=utf-8
       Status:
@@ -664,19 +527,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4782'
+      - '4798'
       X-Ratelimit-Reset:
-      - '1394560719'
+      - '1394809219'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Etag:
-      - "\"ad7a9281f2958a22a5aeb41ccae443a1\""
+      - "\"efcf7c02f9d472420ec80a02a008c02a\""
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       Location:
-      - https://api.github.com/repos/Floppy/bimble-test/pulls/2
+      - https://api.github.com/repos/Floppy/bimble-test/pulls/7
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       X-Github-Media-Type:
@@ -684,7 +547,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Content-Length:
-      - '14335'
+      - '14356'
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Expose-Headers:
@@ -693,12 +556,12 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 519F8646:31E6:140EAB7:531F40BE
+      - 519F8646:0ED8:10BEB2B:53230B73
     body:
       encoding: UTF-8
-      string: "{\"url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/2\",\"id\":13431302,\"html_url\":\"https://github.com/Floppy/bimble-test/pull/2\",\"diff_url\":\"https://github.com/Floppy/bimble-test/pull/2.diff\",\"patch_url\":\"https://github.com/Floppy/bimble-test/pull/2.patch\",\"issue_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/2\",\"number\":2,\"state\":\"open\",\"title\":\"Updated
+      string: "{\"url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/7\",\"id\":13571852,\"html_url\":\"https://github.com/Floppy/bimble-test/pull/7\",\"diff_url\":\"https://github.com/Floppy/bimble-test/pull/7.diff\",\"patch_url\":\"https://github.com/Floppy/bimble-test/pull/7.patch\",\"issue_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/7\",\"number\":7,\"state\":\"open\",\"title\":\"Updated
         dependencies\",\"user\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"body\":\"Automatically
-        generated by bimble\",\"created_at\":\"2014-03-11T16:58:39Z\",\"updated_at\":\"2014-03-11T16:58:39Z\",\"closed_at\":null,\"merged_at\":null,\"merge_commit_sha\":null,\"assignee\":null,\"milestone\":null,\"commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/2/commits\",\"review_comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/2/comments\",\"review_comment_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/comments/{number}\",\"comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/2/comments\",\"statuses_url\":\"https://api.github.com/repos/Floppy/bimble-test/statuses/53d36f559e9e79603456e4fade412633ddbd1895\",\"head\":{\"label\":\"Floppy:update-dependencies\",\"ref\":\"update-dependencies\",\"sha\":\"53d36f559e9e79603456e4fade412633ddbd1895\",\"user\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"repo\":{\"id\":17630125,\"name\":\"bimble-test\",\"full_name\":\"Floppy/bimble-test\",\"owner\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"private\":false,\"html_url\":\"https://github.com/Floppy/bimble-test\",\"description\":\"\",\"fork\":false,\"url\":\"https://api.github.com/repos/Floppy/bimble-test\",\"forks_url\":\"https://api.github.com/repos/Floppy/bimble-test/forks\",\"keys_url\":\"https://api.github.com/repos/Floppy/bimble-test/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/Floppy/bimble-test/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/Floppy/bimble-test/teams\",\"hooks_url\":\"https://api.github.com/repos/Floppy/bimble-test/hooks\",\"issue_events_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/Floppy/bimble-test/events\",\"assignees_url\":\"https://api.github.com/repos/Floppy/bimble-test/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/Floppy/bimble-test/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/tags\",\"blobs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/Floppy/bimble-test/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/Floppy/bimble-test/languages\",\"stargazers_url\":\"https://api.github.com/repos/Floppy/bimble-test/stargazers\",\"contributors_url\":\"https://api.github.com/repos/Floppy/bimble-test/contributors\",\"subscribers_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscription\",\"commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/comments/{number}\",\"contents_url\":\"https://api.github.com/repos/Floppy/bimble-test/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/Floppy/bimble-test/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/Floppy/bimble-test/merges\",\"archive_url\":\"https://api.github.com/repos/Floppy/bimble-test/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/Floppy/bimble-test/downloads\",\"issues_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/Floppy/bimble-test/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Floppy/bimble-test/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/Floppy/bimble-test/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/Floppy/bimble-test/releases{/id}\",\"created_at\":\"2014-03-11T12:49:15Z\",\"updated_at\":\"2014-03-11T16:58:39Z\",\"pushed_at\":\"2014-03-11T16:57:14Z\",\"git_url\":\"git://github.com/Floppy/bimble-test.git\",\"ssh_url\":\"git@github.com:Floppy/bimble-test.git\",\"clone_url\":\"https://github.com/Floppy/bimble-test.git\",\"svn_url\":\"https://github.com/Floppy/bimble-test\",\"homepage\":null,\"size\":0,\"stargazers_count\":0,\"watchers_count\":0,\"language\":\"Ruby\",\"has_issues\":true,\"has_downloads\":true,\"has_wiki\":true,\"forks_count\":0,\"mirror_url\":null,\"open_issues_count\":1,\"forks\":0,\"open_issues\":1,\"watchers\":0,\"default_branch\":\"master\",\"master_branch\":\"master\"}},\"base\":{\"label\":\"Floppy:master\",\"ref\":\"master\",\"sha\":\"97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"user\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"repo\":{\"id\":17630125,\"name\":\"bimble-test\",\"full_name\":\"Floppy/bimble-test\",\"owner\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"private\":false,\"html_url\":\"https://github.com/Floppy/bimble-test\",\"description\":\"\",\"fork\":false,\"url\":\"https://api.github.com/repos/Floppy/bimble-test\",\"forks_url\":\"https://api.github.com/repos/Floppy/bimble-test/forks\",\"keys_url\":\"https://api.github.com/repos/Floppy/bimble-test/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/Floppy/bimble-test/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/Floppy/bimble-test/teams\",\"hooks_url\":\"https://api.github.com/repos/Floppy/bimble-test/hooks\",\"issue_events_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/Floppy/bimble-test/events\",\"assignees_url\":\"https://api.github.com/repos/Floppy/bimble-test/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/Floppy/bimble-test/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/tags\",\"blobs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/Floppy/bimble-test/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/Floppy/bimble-test/languages\",\"stargazers_url\":\"https://api.github.com/repos/Floppy/bimble-test/stargazers\",\"contributors_url\":\"https://api.github.com/repos/Floppy/bimble-test/contributors\",\"subscribers_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscription\",\"commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/comments/{number}\",\"contents_url\":\"https://api.github.com/repos/Floppy/bimble-test/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/Floppy/bimble-test/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/Floppy/bimble-test/merges\",\"archive_url\":\"https://api.github.com/repos/Floppy/bimble-test/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/Floppy/bimble-test/downloads\",\"issues_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/Floppy/bimble-test/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Floppy/bimble-test/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/Floppy/bimble-test/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/Floppy/bimble-test/releases{/id}\",\"created_at\":\"2014-03-11T12:49:15Z\",\"updated_at\":\"2014-03-11T16:58:39Z\",\"pushed_at\":\"2014-03-11T16:57:14Z\",\"git_url\":\"git://github.com/Floppy/bimble-test.git\",\"ssh_url\":\"git@github.com:Floppy/bimble-test.git\",\"clone_url\":\"https://github.com/Floppy/bimble-test.git\",\"svn_url\":\"https://github.com/Floppy/bimble-test\",\"homepage\":null,\"size\":0,\"stargazers_count\":0,\"watchers_count\":0,\"language\":\"Ruby\",\"has_issues\":true,\"has_downloads\":true,\"has_wiki\":true,\"forks_count\":0,\"mirror_url\":null,\"open_issues_count\":1,\"forks\":0,\"open_issues\":1,\"watchers\":0,\"default_branch\":\"master\",\"master_branch\":\"master\"}},\"_links\":{\"self\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/2\"},\"html\":{\"href\":\"https://github.com/Floppy/bimble-test/pull/2\"},\"issue\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/issues/2\"},\"comments\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/issues/2/comments\"},\"review_comments\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/2/comments\"},\"review_comment\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/comments/{number}\"},\"commits\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/2/commits\"},\"statuses\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/statuses/53d36f559e9e79603456e4fade412633ddbd1895\"}},\"merged\":false,\"mergeable\":null,\"mergeable_state\":\"unknown\",\"merged_by\":null,\"comments\":0,\"review_comments\":0,\"commits\":1,\"additions\":4,\"deletions\":8,\"changed_files\":1}"
+        updated by Bimble\",\"created_at\":\"2014-03-14T14:00:19Z\",\"updated_at\":\"2014-03-14T14:00:19Z\",\"closed_at\":null,\"merged_at\":null,\"merge_commit_sha\":null,\"assignee\":null,\"milestone\":null,\"commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/7/commits\",\"review_comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/7/comments\",\"review_comment_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/comments/{number}\",\"comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/7/comments\",\"statuses_url\":\"https://api.github.com/repos/Floppy/bimble-test/statuses/f88f55702a4b1e90b88e07d6fba57ef2f63a8965\",\"head\":{\"label\":\"Floppy:update-dependencies-2014-03-14\",\"ref\":\"update-dependencies-2014-03-14\",\"sha\":\"f88f55702a4b1e90b88e07d6fba57ef2f63a8965\",\"user\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"repo\":{\"id\":17630125,\"name\":\"bimble-test\",\"full_name\":\"Floppy/bimble-test\",\"owner\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"private\":false,\"html_url\":\"https://github.com/Floppy/bimble-test\",\"description\":\"\",\"fork\":false,\"url\":\"https://api.github.com/repos/Floppy/bimble-test\",\"forks_url\":\"https://api.github.com/repos/Floppy/bimble-test/forks\",\"keys_url\":\"https://api.github.com/repos/Floppy/bimble-test/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/Floppy/bimble-test/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/Floppy/bimble-test/teams\",\"hooks_url\":\"https://api.github.com/repos/Floppy/bimble-test/hooks\",\"issue_events_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/Floppy/bimble-test/events\",\"assignees_url\":\"https://api.github.com/repos/Floppy/bimble-test/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/Floppy/bimble-test/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/tags\",\"blobs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/Floppy/bimble-test/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/Floppy/bimble-test/languages\",\"stargazers_url\":\"https://api.github.com/repos/Floppy/bimble-test/stargazers\",\"contributors_url\":\"https://api.github.com/repos/Floppy/bimble-test/contributors\",\"subscribers_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscription\",\"commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/comments/{number}\",\"contents_url\":\"https://api.github.com/repos/Floppy/bimble-test/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/Floppy/bimble-test/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/Floppy/bimble-test/merges\",\"archive_url\":\"https://api.github.com/repos/Floppy/bimble-test/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/Floppy/bimble-test/downloads\",\"issues_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/Floppy/bimble-test/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Floppy/bimble-test/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/Floppy/bimble-test/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/Floppy/bimble-test/releases{/id}\",\"created_at\":\"2014-03-11T12:49:15Z\",\"updated_at\":\"2014-03-14T14:00:19Z\",\"pushed_at\":\"2014-03-14T14:00:19Z\",\"git_url\":\"git://github.com/Floppy/bimble-test.git\",\"ssh_url\":\"git@github.com:Floppy/bimble-test.git\",\"clone_url\":\"https://github.com/Floppy/bimble-test.git\",\"svn_url\":\"https://github.com/Floppy/bimble-test\",\"homepage\":null,\"size\":0,\"stargazers_count\":0,\"watchers_count\":0,\"language\":\"Ruby\",\"has_issues\":true,\"has_downloads\":true,\"has_wiki\":true,\"forks_count\":0,\"mirror_url\":null,\"open_issues_count\":1,\"forks\":0,\"open_issues\":1,\"watchers\":0,\"default_branch\":\"master\",\"master_branch\":\"master\"}},\"base\":{\"label\":\"Floppy:master\",\"ref\":\"master\",\"sha\":\"97376a25bcc2e403ed5b9c9f7eb35c0e8a36c01c\",\"user\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"repo\":{\"id\":17630125,\"name\":\"bimble-test\",\"full_name\":\"Floppy/bimble-test\",\"owner\":{\"login\":\"Floppy\",\"id\":3565,\"avatar_url\":\"https://gravatar.com/avatar/c150a49c7709fa40bffca545ecf8942d?d=https%3A%2F%2Fidenticons.github.com%2Fe6e713296627dff6475085cc6a224464.png&r=x\",\"gravatar_id\":\"c150a49c7709fa40bffca545ecf8942d\",\"url\":\"https://api.github.com/users/Floppy\",\"html_url\":\"https://github.com/Floppy\",\"followers_url\":\"https://api.github.com/users/Floppy/followers\",\"following_url\":\"https://api.github.com/users/Floppy/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Floppy/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Floppy/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Floppy/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Floppy/orgs\",\"repos_url\":\"https://api.github.com/users/Floppy/repos\",\"events_url\":\"https://api.github.com/users/Floppy/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Floppy/received_events\",\"type\":\"User\",\"site_admin\":false},\"private\":false,\"html_url\":\"https://github.com/Floppy/bimble-test\",\"description\":\"\",\"fork\":false,\"url\":\"https://api.github.com/repos/Floppy/bimble-test\",\"forks_url\":\"https://api.github.com/repos/Floppy/bimble-test/forks\",\"keys_url\":\"https://api.github.com/repos/Floppy/bimble-test/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/Floppy/bimble-test/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/Floppy/bimble-test/teams\",\"hooks_url\":\"https://api.github.com/repos/Floppy/bimble-test/hooks\",\"issue_events_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/Floppy/bimble-test/events\",\"assignees_url\":\"https://api.github.com/repos/Floppy/bimble-test/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/Floppy/bimble-test/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/tags\",\"blobs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/Floppy/bimble-test/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/Floppy/bimble-test/languages\",\"stargazers_url\":\"https://api.github.com/repos/Floppy/bimble-test/stargazers\",\"contributors_url\":\"https://api.github.com/repos/Floppy/bimble-test/contributors\",\"subscribers_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Floppy/bimble-test/subscription\",\"commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/Floppy/bimble-test/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/Floppy/bimble-test/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues/comments/{number}\",\"contents_url\":\"https://api.github.com/repos/Floppy/bimble-test/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/Floppy/bimble-test/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/Floppy/bimble-test/merges\",\"archive_url\":\"https://api.github.com/repos/Floppy/bimble-test/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/Floppy/bimble-test/downloads\",\"issues_url\":\"https://api.github.com/repos/Floppy/bimble-test/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/Floppy/bimble-test/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/Floppy/bimble-test/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Floppy/bimble-test/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/Floppy/bimble-test/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/Floppy/bimble-test/releases{/id}\",\"created_at\":\"2014-03-11T12:49:15Z\",\"updated_at\":\"2014-03-14T14:00:19Z\",\"pushed_at\":\"2014-03-14T14:00:19Z\",\"git_url\":\"git://github.com/Floppy/bimble-test.git\",\"ssh_url\":\"git@github.com:Floppy/bimble-test.git\",\"clone_url\":\"https://github.com/Floppy/bimble-test.git\",\"svn_url\":\"https://github.com/Floppy/bimble-test\",\"homepage\":null,\"size\":0,\"stargazers_count\":0,\"watchers_count\":0,\"language\":\"Ruby\",\"has_issues\":true,\"has_downloads\":true,\"has_wiki\":true,\"forks_count\":0,\"mirror_url\":null,\"open_issues_count\":1,\"forks\":0,\"open_issues\":1,\"watchers\":0,\"default_branch\":\"master\",\"master_branch\":\"master\"}},\"_links\":{\"self\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/7\"},\"html\":{\"href\":\"https://github.com/Floppy/bimble-test/pull/7\"},\"issue\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/issues/7\"},\"comments\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/issues/7/comments\"},\"review_comments\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/7/comments\"},\"review_comment\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/comments/{number}\"},\"commits\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/pulls/7/commits\"},\"statuses\":{\"href\":\"https://api.github.com/repos/Floppy/bimble-test/statuses/f88f55702a4b1e90b88e07d6fba57ef2f63a8965\"}},\"merged\":false,\"mergeable\":null,\"mergeable_state\":\"unknown\",\"merged_by\":null,\"comments\":0,\"review_comments\":0,\"commits\":1,\"additions\":1,\"deletions\":10,\"changed_files\":1}"
     http_version: 
-  recorded_at: Tue, 11 Mar 2014 16:58:39 GMT
+  recorded_at: Fri, 14 Mar 2014 14:00:22 GMT
 recorded_with: VCR 2.8.0
