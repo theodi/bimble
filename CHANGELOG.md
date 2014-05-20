@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+Fix bug whereby wrong gemfile would be used if run inside bundle exec.
+
 ## 1.0.1
 
 Fix bug where bundle update would use Gemfile in current directory if available.
