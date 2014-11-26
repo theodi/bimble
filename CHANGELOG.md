@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+Ignore local bundler config, which interferes with bimbling on Heroku.
+
 ## 1.0.2
 
 Fix bug whereby wrong gemfile would be used if run inside bundle exec.

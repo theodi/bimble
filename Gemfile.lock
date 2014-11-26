@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bimble (1.0.2)
+    bimble (1.0.3)
       dotenv
       git
       github_api
