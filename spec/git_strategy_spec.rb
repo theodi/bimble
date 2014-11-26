@@ -15,9 +15,9 @@ require 'spec_helper'
     
     it "should get all appropriate files" do
       @bimble.in_working_copy do
-        File.exists?('Gemfile').should be_true
-        File.exists?('Gemfile.lock').should be_true
-        File.exists?('bimble-test.gemspec').should be_true
+        File.exists?('Gemfile').should eq(true)
+        File.exists?('Gemfile.lock').should eq(true)
+        File.exists?('bimble-test.gemspec').should eq(true)
       end
     end
   
