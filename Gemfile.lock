@@ -48,7 +48,7 @@ GEM
     jwt (1.5.2)
     launchy (2.4.3)
       addressable (~> 2.3)
-    memoist (0.13.0)
+    memoist (0.14.0)
     method_source (0.8.2)
     mime-types (2.99)
     mini_portile2 (2.0.0)
