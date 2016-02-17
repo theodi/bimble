@@ -39,7 +39,7 @@ GEM
       hashie (>= 3.4)
       multi_json (>= 1.7.5, < 2.0)
       oauth2
-    hashdiff (0.2.3)
+    hashdiff (0.3.0)
     hashie (3.4.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
