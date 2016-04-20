@@ -85,7 +85,7 @@ GEM
     thread_safe (0.3.5)
     tins (1.6.0)
     vcr (3.0.1)
-    webmock (1.24.2)
+    webmock (1.24.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
